@@ -1,0 +1,23 @@
+{
+  "name": "arif98741/school-project",
+  "type": "library",
+  "require": {
+    "shipu/bkash": "dev-master",
+    "vlucas/phpdotenv": "^5.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Shipu Ahamed",
+      "email": "shipuahamed01@gmail.com"
+    }
+  ],
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-update-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}
