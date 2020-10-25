@@ -3,5 +3,5 @@
 *.iml
 .phpintel
 .idea
-vendor
+vendor/*
 node_modules
