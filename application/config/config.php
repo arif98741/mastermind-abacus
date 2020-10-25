@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 //$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST']."/".__FILE__;
 $base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
 $base_url .= "://". @$_SERVER['HTTP_HOST'];
