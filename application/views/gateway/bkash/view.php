@@ -42,7 +42,7 @@ $data = $paymentData;
         var ref_no = '<?=$data["ref_no"]?>';
 
         var url = {
-            base_url: 'http://localhost/school/',
+            base_url: 'http://mastermindabacusbd.com/',
         };
 
 
