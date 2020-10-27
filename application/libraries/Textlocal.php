@@ -47,12 +47,13 @@ class Textlocal
         } else {
             $branchID = get_loggedin_branch_id();
         }
-        $textlocal = $ci->db->get_where('sms_credential', array('sms_api_id' => 5, 'branch_id' => $branchID))->row_array();
+       /* $textlocal = $ci->db->get_where('sms_credential', array('sms_api_id' => 5, 'branch_id' => $branchID))->row_array();
 
 		//$username, $hash, $apiKey = false
 		$this->username 		= $textlocal['field_one'];
 		$this->hash 			= $textlocal['field_three'];
 		$this->sender_number 	= $textlocal['field_two'];
+       */
 
 
 		if ($apiKey) {

@@ -12,9 +12,11 @@ class Msg91 {
         } else {
             $branchID = get_loggedin_branch_id();
         }
-        $msg91 = $ci->db->get_where('sms_credential', array('sms_api_id' => 3, 'branch_id' => $branchID))->row_array();
+
+        /*$msg91 = $ci->db->get_where('sms_credential', array('sms_api_id' => 3, 'branch_id' => $branchID))->row_array();
         $this->authKey  = $msg91['field_one'];
         $this->senderID = $msg91['field_two'];
+        */
 	}
 
     public function send($to, $message)
