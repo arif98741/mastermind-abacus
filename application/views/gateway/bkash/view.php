@@ -42,7 +42,7 @@ $data = $paymentData;
         var ref_no = '<?=$data["ref_no"]?>';
 
         var url = {
-            base_url: 'http://mastermindabacusbd.com/',
+            base_url: 'https://mastermindabacusbd.com/',
         };
 
 
@@ -99,12 +99,12 @@ $data = $paymentData;
                                     bKash.create().onSuccess(data);
                                 } else {
                                     bKash.create().onError();
-                                    window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Payment Id";
+                                    //window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Payment Id";
                                 }
                             },
                             error: function (xhr, textStatus, errorThrown) {
                                 bKash.create().onError();
-                                window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Request";
+                                //window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Request";
                             }
                         });
 
@@ -118,29 +118,29 @@ $data = $paymentData;
                                 data = JSON.parse(response);
                                 if (data && data.paymentID != null) {
                                     paymentID = null;
-                                    window.location.href = successUrl + "&n_type=success&n_key=payment_done";
+                                    //window.location.href = successUrl + "&n_type=success&n_key=payment_done";
                                 } else {
                                     bKash.execute().onError();
-                                    window.location.href = failedUrl + errorMessage(data);
+                                    //window.location.href = failedUrl + errorMessage(data);
                                 }
                             },
                             error: function (xhr) {
                                 data = xhr.responseJSON;
                                 bKash.execute().onError();
-                                window.location.href = failedUrl + errorMessage(data);
+                                //window.location.href = failedUrl + errorMessage(data);
                             }
                         });
 
                     },
                     onClose: function () {
-                        window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Please try again !!!";
+                        //window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Please try again !!!";
                     }
                 });
 
                 $('#bKash_button').click();
 
             });
-        // window.location.replace(window.location.href);
+        // //window.location.replace(//window.location.href);
     });
 </script>
 </body>
