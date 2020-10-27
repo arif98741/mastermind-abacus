@@ -343,6 +343,7 @@ class Event extends Admin_Controller
 
     public function get_events_list($branchID = '')
     {
+        $eventData = [];
         if (is_loggedin()) {
             if (!is_superadmin_loggedin()) {
                 $this->db->where('branch_id', get_loggedin_branch_id());
@@ -365,9 +366,9 @@ class Event extends Admin_Controller
                     $icon = get_type_name_by_id('event_types', $row->type, 'icon');
                     $arrayData['icon'] = $icon;
                 }
-                $eventdata[] = $arrayData;
+                $eventData[] = $arrayData;
             }
-            echo json_encode($eventdata);
+            echo json_encode($eventData);
         }
     }
 

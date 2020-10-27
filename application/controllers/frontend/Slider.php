@@ -112,12 +112,26 @@ class Slider extends Admin_Controller
         if (!get_permission('frontend_slider', 'is_delete')) {
             access_denied();
         }
-        $image = $this->db->get_where('front_cms_home', array('id' => $id, 'item_type' => 'slider'))->row()->image;
+        $image = $this->db->get_where('front_cms_home', array('id' => $id, 'item_type' => 'slider'))
+            ->row();
+        /**
+         *      $image = $this->db->get_where('front_cms_home', array('id' => $id, 'item_type' => 'slider'))->row()->image;
+                if ($this->db->where(array('id' => $id, 'item_type' => 'slider'))->delete("front_cms_home")) {
+                // delete gallery slider
+                $destination = './uploads/frontend/slider/';
+                if (file_exists($destination . $image)) {
+                @unlink($destination . $image);
+                }
+                }
+         */
+
+        $imagePath = json_decode($image->elements)->image;
+
         if ($this->db->where(array('id' => $id, 'item_type' => 'slider'))->delete("front_cms_home")) {
             // delete gallery slider
             $destination = './uploads/frontend/slider/';
-            if (file_exists($destination . $image)) {
-                @unlink($destination . $image);
+            if (file_exists($destination . $imagePath)) {
+                @unlink($destination . $imagePath);
             }
         }
     }
