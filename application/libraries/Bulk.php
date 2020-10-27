@@ -14,12 +14,14 @@ class Bulk {
         } else {
             $branchID = get_loggedin_branch_id();
         }
-        $bulksms = $ci->db->get_where('sms_credential', array('sms_api_id' => 4, 'branch_id' => $branchID))->row_array();
+
+        /*$bulksms = $ci->db->get_where('sms_credential', array('sms_api_id' => 4, 'branch_id' => $branchID))->row_array();
 
         $this->username = $bulksms['field_one'];
         $this->password = $bulksms['field_two'];
         $this->url =  'https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0';
         $this->port = 443;
+        */
 	}
 
 	public function show() {

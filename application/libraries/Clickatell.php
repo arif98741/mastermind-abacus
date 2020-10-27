@@ -10,6 +10,7 @@
  */
 class Clickatell
 {
+
     const ERR_NONE              = 0;
     const ERR_AUTH_FAIL         = 1;
     const ERR_SEND_MESSAGE_FAIL = 2;
@@ -39,10 +40,11 @@ class Clickatell
             $branchID = get_loggedin_branch_id();
         }
         $clickatell = $ci->db->get_where('sms_credential', array('sms_api_id' => 2, 'branch_id' => $branchID))->row_array();
-        $this->username = $clickatell['field_one'];
+        /*$this->username = $clickatell['field_one'];
         $this->password = $clickatell['field_two'];
         $this->api_id   = $clickatell['field_three'];
         $this->from_no  = $clickatell['field_four'];
+        */
     }
 
     /**
