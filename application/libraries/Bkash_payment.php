@@ -79,10 +79,10 @@ class Bkash_payment
         return [
             BkashKey::SANDBOX => true,
             BkashKey::VERSION => "v1.2.0-beta",
-            BkashKey::APP_KEY => "5tunt4masn6pv2hnvte1sb5n3j",
-            BkashKey::APP_SECRET => "1vggbqd4hqk9g96o9rrrp2jftvek578v7d2bnerim12a87dbrrka",
-            BkashKey::USER_NAME => "sandboxTestUser",
-            BkashKey::PASSWORD => "hWD@8vtzw0",
+            BkashKey::APP_KEY => "5nej5keguopj928ekcj3dne8p",
+            BkashKey::APP_SECRET => "1honf6u1c56mqcivtc9ffl960slp4v2756jle5925nbooa46ch62",
+            BkashKey::USER_NAME => "testdemo",
+            BkashKey::PASSWORD => "test%#de23@msdao",
             BkashKey::SANDBOX_SCRIPT => "https://scripts.sandbox.bka.sh/versions/1.2.0-beta/checkout/bKash-checkout-sandbox.js",
             BkashKey::PRODUCTION_SCRIPT => env("BKASH_CHECKOUT_PRODUCTION_SCRIPT", ""),
             BkashKey::TOKEN => function ($config) {
