@@ -73,8 +73,7 @@ class Bkash_payment
      * Configuration
      * @return array[]
      */
-    private
-    function bkashConfig()
+    private function bkashConfig()
     {
         return [
             BkashKey::SANDBOX => true,

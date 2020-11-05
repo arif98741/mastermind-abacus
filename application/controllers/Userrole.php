@@ -419,9 +419,9 @@ class Userrole extends User_Controller
                 set_alert('success', translate('You have successfully paid using bkash'));
             }
 
-            if ($_GET['ref'] == 'bkash?n_type=error' && $_GET['payment'] == 'failed') {
+            if ($_GET['ref'] == 'bkash' && $_GET['n_type'] == 'error') {
 
-                set_alert('error', translate('Unexpected error to pay fee.Please try again. '.$_GET['n_msg']));
+                set_alert('error', translate('Error.. Failed to pay using bkash. Please try again'));
             }
 
         }
