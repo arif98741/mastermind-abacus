@@ -212,10 +212,10 @@ class Feespayment extends Admin_Controller
     {
         // insert in DB
         $this->db->insert('fee_payment_history', $data);
-
         // transaction voucher save function
         $getSeeting = $this->fees_model->get('transactions_links', array('branch_id' => get_loggedin_branch_id()), true);
-        if ($getSeeting['status']) {
+
+        if (!empty($getSeeting['status'])) {
             $arrayTransaction = array(
                 'account_id' => $getSeeting['deposit'],
                 'amount' => $data['amount'] + $data['fine'],
@@ -287,7 +287,7 @@ class Feespayment extends Admin_Controller
                 'date' => date("Y-m-d"),
             );
 
-            $this->savePaymentData($arrayFees);
+            $status = $this->savePaymentData($arrayFees);
             echo $execution;
         } else {
             echo $execution;

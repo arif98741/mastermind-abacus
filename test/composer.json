@@ -1,0 +1,14 @@
+{
+    "name": "admin/bkash-custom",
+    "authors": [
+        {
+            "name": "Ariful Islam",
+            "email": "arif98741@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2",
+      "ext-json": "*",
+      "ext-curl": "*"
+    }
+}

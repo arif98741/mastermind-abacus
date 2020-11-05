@@ -11,9 +11,8 @@ $data = $paymentData;
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bkash Payment for - <?php echo $data['order_code']; ?></title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <style>
         html {
@@ -24,6 +23,12 @@ $data = $paymentData;
         #bKashFrameWrapper {
             width: 100% !important;
             height: 100% !important;
+        }
+
+        .swal-overlay--show-modal {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 9999999999999;
         }
     </style>
 </head>
@@ -99,12 +104,16 @@ $data = $paymentData;
                                     bKash.create().onSuccess(data);
                                 } else {
                                     bKash.create().onError();
-                                    window.location = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Payment Id";
+
+                                    window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Payment Id";
+
                                 }
                             },
                             error: function (xhr, textStatus, errorThrown) {
                                 bKash.create().onError();
-                                window.location = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Request";
+
+                                window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Invalid Request";
+
                             }
                         });
 
@@ -115,7 +124,20 @@ $data = $paymentData;
                             type: 'POST',
                             data: {paymentId: paymentID},
                             success: function (response) {
+                                console.log(response);
                                 data = JSON.parse(response);
+                                if (data && data.errorCode == '2029') {
+                                    swal({
+                                        title: "Error",
+                                        icon: 'error',
+                                        text: 'Payment Unsuccessful! ' + data.errorMessage,
+                                    }).then(function () {
+                                        // Redirect the user
+                                        window.location.href = failedUrl + "&n_type=error&n_msg=failed";
+                                    });
+                                    return false;
+                                }
+
                                 if (data && data.paymentID != null) {
                                     paymentID = null;
                                     window.location = successUrl + "&n_type=success&n_key=payment_done";
