@@ -12,11 +12,18 @@ class Application_model extends CI_Model
 
     public function get_branch_id()
     {
-        if (is_superadmin_loggedin()) {
-            return $this->input->post('branch_id');
-        } else {
-            return get_loggedin_branch_id();
-        }
+        /*
+         * This is modified and using for single branch. In future this will be
+         * uncommented and ready fixing bug. but we will work now for single branch.
+         * that's why we are keeping this branch fixed as well.
+        */
+        return get_loggedin_branch_id();
+        /* if (is_superadmin_loggedin()) {
+             return $this->input->post('branch_id');
+         } else {
+             return get_loggedin_branch_id();
+         }*/
+
     }
 
     public function profilePicUpload()
@@ -96,7 +103,7 @@ class Application_model extends CI_Model
         if ($r == "") {
             return 'disabled';
         } else {
-           return  $r['sms_api_id'];
+            return $r['sms_api_id'];
         }
     }
 
@@ -178,7 +185,7 @@ class Application_model extends CI_Model
         $sql = "SELECT id,body,created_at,IF(sender = " . $activeUser . ", 'sent','inbox') as `msg_type`,IF(sender = " . $activeUser . ", reciever,sender) as `get_user` FROM message WHERE (sender = " . $activeUser . " AND trash_sent = 0 AND reply_status = 1) OR (reciever = " . $activeUser . " AND trash_inbox = 0 AND read_status = 0) ORDER BY id DESC";
         $result = $this->db->query($sql)->result_array();
         foreach ($result as $key => $value) {
-           $result[$key]['message_details'] =  $this->getMessage_details($value['get_user']);
+            $result[$key]['message_details'] = $this->getMessage_details($value['get_user']);
         }
         return $result;
     }
@@ -200,8 +207,8 @@ class Application_model extends CI_Model
             $getUSER = $this->db->query("SELECT name,photo FROM staff WHERE id = " . $this->db->escape($userID))->row_array();
         }
         $arrayData = array(
-            'imgPath' => get_image_url($userType, $getUSER['photo']), 
-            'userName' => $getUSER['name'], 
+            'imgPath' => get_image_url($userType, $getUSER['photo']),
+            'userName' => $getUSER['name'],
         );
         return $arrayData;
     }

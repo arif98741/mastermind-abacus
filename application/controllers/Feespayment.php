@@ -253,7 +253,6 @@ class Feespayment extends Admin_Controller
      */
     public function createBkashPayment()
     {
-
         $this->load->library('bkash_payment');
         $createPayment = $this->bkash_payment->createPayment($_POST);
         echo $createPayment; //echo json data
@@ -281,13 +280,13 @@ class Feespayment extends Admin_Controller
                 'amount' => $responseArray['amount'],
                 'discount' => 0,
                 'fine' => $params['fine'],
-                'pay_via' => 11,
+                'pay_via' => 11, //for bkash it is used 11 as static.
                 'collect_by' => 'online',
                 'remarks' => "Fees deposits - Bkash - Ref ID: " . $ref_id,
                 'date' => date("Y-m-d"),
             );
 
-            $status = $this->savePaymentData($arrayFees);
+            $this->savePaymentData($arrayFees);
             echo $execution;
         } else {
             echo $execution;

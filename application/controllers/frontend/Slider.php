@@ -116,13 +116,13 @@ class Slider extends Admin_Controller
             ->row();
         /**
          *      $image = $this->db->get_where('front_cms_home', array('id' => $id, 'item_type' => 'slider'))->row()->image;
-                if ($this->db->where(array('id' => $id, 'item_type' => 'slider'))->delete("front_cms_home")) {
-                // delete gallery slider
-                $destination = './uploads/frontend/slider/';
-                if (file_exists($destination . $image)) {
-                @unlink($destination . $image);
-                }
-                }
+         * if ($this->db->where(array('id' => $id, 'item_type' => 'slider'))->delete("front_cms_home")) {
+         * // delete gallery slider
+         * $destination = './uploads/frontend/slider/';
+         * if (file_exists($destination . $image)) {
+         * @unlink($destination . $image);
+         * }
+         * }
          */
 
         $imagePath = json_decode($image->elements)->image;
