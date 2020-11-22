@@ -217,7 +217,8 @@ class Feespayment extends Admin_Controller
 
         if (!empty($getSeeting['status'])) {
             $arrayTransaction = array(
-                'account_id' => $getSeeting['deposit'],
+               // 'account_id' => $getSeeting['deposit'],
+                'account_id' => 1, //FIXED
                 'amount' => $data['amount'] + $data['fine'],
                 'date' => $data['date'],
             );

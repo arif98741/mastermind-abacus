@@ -146,8 +146,6 @@ $data = $paymentData;
 
                                     window.location = failedUrl + errorMessage(data);
 
-                                    // window.location.href = failedUrl + errorMessage(data);
-
                                 }
                             },
                             error: function (xhr) {
