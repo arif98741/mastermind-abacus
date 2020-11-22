@@ -12,12 +12,13 @@ class Application_model extends CI_Model
 
     public function get_branch_id()
     {
+        return 1;
         /*
          * This is modified and using for single branch. In future this will be
          * uncommented and ready fixing bug. but we will work now for single branch.
          * that's why we are keeping this branch fixed as well.
         */
-        return get_loggedin_branch_id();
+        //return get_loggedin_branch_id();
         /* if (is_superadmin_loggedin()) {
              return $this->input->post('branch_id');
          } else {
