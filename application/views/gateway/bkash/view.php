@@ -139,7 +139,7 @@ $data = $paymentData;
                                     window.location.href = successUrl + "&n_type=success&n_key=payment_done";
                                 } else {
                                     bKash.execute().onError();
-                                   // window.location.href = failedUrl + errorMessage(data);
+                                    window.location.href = failedUrl + errorMessage(data);
                                 }
                             },
                             error: function (xhr) {
