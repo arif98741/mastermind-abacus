@@ -71,6 +71,21 @@ class Bkash_payment
     private function bkashConfig()
     {
         return [
+            BkashKey::SANDBOX => false,
+            BkashKey::VERSION => "v1.2.0-beta",
+            BkashKey::APP_KEY => "hsik2pardtlljfem90i9k5f7c",
+            BkashKey::APP_SECRET => "o7od7l3dj5vjvat8d5ksjc9otc0m4hmt7uq1spnd3a5i5f5fgu1",
+            BkashKey::USER_NAME => "MASTERMINDABACUSBDLTD",
+            BkashKey::PASSWORD => "mA9@St1Er7Bc",
+            BkashKey::SANDBOX_SCRIPT => "https://scripts.pay.bka.sh/versions/1.2.0-beta/checkout/bKash-checkout.js",
+            BkashKey::PRODUCTION_SCRIPT => env("BKASH_CHECKOUT_PRODUCTION_SCRIPT", ""),
+            BkashKey::TOKEN => function ($config) {
+                $checkoutApi = new CheckoutBaseApi($config);
+                $grandToken = $checkoutApi->grantToken();
+                return $grandToken()->id_token;
+            }
+        ];
+        /*return [
             BkashKey::SANDBOX => true,
             BkashKey::VERSION => "v1.2.0-beta",
             BkashKey::APP_KEY => "5nej5keguopj928ekcj3dne8p",
@@ -84,7 +99,8 @@ class Bkash_payment
                 $grandToken = $checkoutApi->grantToken();
                 return $grandToken()->id_token;
             }
-        ];
+        ];*/
+
     }
 
 
