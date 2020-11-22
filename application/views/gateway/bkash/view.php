@@ -39,7 +39,7 @@ $data = $paymentData;
 <script type="text/javascript">
     $(function () {
         // Change script url when it's live
-        var scriptLink = 'https://scripts.sandbox.bka.sh/versions/1.2.0-beta/checkout/bKash-checkout-sandbox.js';
+        var scriptLink = 'https://scripts.pay.bka.sh/versions/1.2.0-beta/checkout/bKash-checkout.js';
 
         var successUrl = '<?=$data["success_url"]?>';
         var failedUrl = '<?=$data["failed_url"]?>';
