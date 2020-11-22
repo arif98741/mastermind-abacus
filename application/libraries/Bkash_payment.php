@@ -27,11 +27,6 @@ class Bkash_payment
     {
         require_once 'composer_load.php';
         $checkout = new Checkout($this->bkashConfig());
-        $requestParams = json_encode([
-            'data' => $data['amount'],
-            'ref' => $data['ref_no']
-        ]);
-
         return $checkout->payment()->create($data['amount'], $data['ref_no'])->query()->toJson();
     }
 

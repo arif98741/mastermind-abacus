@@ -209,7 +209,8 @@ function get_loggedin_user_type()
 function get_loggedin_branch_id()
 {
     $CI = &get_instance();
-    return $CI->session->userdata('loggedin_branch');
+    return 1; //fixed but not permanent
+    //return $CI->session->userdata('loggedin_branch');
 }
 
 // get parent selected active children Id

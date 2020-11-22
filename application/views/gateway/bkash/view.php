@@ -139,19 +139,19 @@ $data = $paymentData;
                                     window.location.href = successUrl + "&n_type=success&n_key=payment_done";
                                 } else {
                                     bKash.execute().onError();
-                                    window.location.href = failedUrl + errorMessage(data);
+                                   // window.location.href = failedUrl + errorMessage(data);
                                 }
                             },
                             error: function (xhr) {
                                 data = xhr.responseJSON;
                                 bKash.execute().onError();
-                                window.location.href = failedUrl + errorMessage(data);
+                               // window.location.href = failedUrl + errorMessage(data);
                             }
                         });
 
                     },
                     onClose: function () {
-                        window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Please try again !!!";
+                      //  window.location.href = failedUrl + "&n_type=error&n_msg=Sorry, your payment was unsuccessful !!! Please try again !!!";
                     }
                 });
 
