@@ -63,7 +63,6 @@ class Bulksmsbd
      */
     private function _sendRequest($command, $params = array())
     {
-
         $params['username'] = $this->username;
         $params['password'] = $this->password;
 
@@ -100,46 +99,49 @@ class Bulksmsbd
      */
     private function _sendRequestCurl($command, $params)
     {
-        $url = self::REQUEST_URL;
-        $number = $this->formatNumbers($params['numbers']);
-        $text = $params['message'];
-        $data = array(
-            'username' => MMABL_USERNAME,
-            'password' => MMABL_PASSWORD,
-            'number' => $number,
-            'message' => $text
-        );
+        try {
+            $url = self::REQUEST_URL;
+            $number = $this->formatNumbers($params['numbers']);
+            $text = $params['message'];
+            $data = array(
+                'username' => MMABL_USERNAME,
+                'password' => MMABL_PASSWORD,
+                'number' => $number,
+                'message' => urldecode($text)
+            );
 
-        $ch = curl_init(); // Initialize cURL
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $smsresult = curl_exec($ch);
-        //TODO:: need to complete the task for changing and response as return value.
+            $ch = curl_init(); // Initialize cURL
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $smsResult = curl_exec($ch);
+            $error = curl_error($ch);
 
+            if ($smsResult == 1000) {
+                throw new Exception('Username or password not correct: ' . $error);
+            } elseif ($smsResult == 1002) {
+                throw new Exception('Empty Number');
+            } elseif ($smsResult == 1003) {
+                throw new Exception('Invalid message or empty message');
+            } elseif ($smsResult == 1004) {
+                throw new Exception('Invalid number');
+            } elseif ($smsResult == 1005) {
+                throw new Exception('All Number is Invalid');
+            } elseif ($smsResult == 1006) {
+                throw new Exception('Insufficient Balance');
+            } elseif ($smsResult == 1009) {
+                throw new Exception('Inactive Account');
+            } elseif ($smsResult == 1010) {
+                throw new Exception('Max number limit exceeded');
+            } else {
+                //return $smsResult;
+                return true;
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
 
-        // Initialize handle
-        /* $ch = curl_init($url);
-         curl_setopt_array($ch, array(
-             CURLOPT_POST => true,
-             CURLOPT_POSTFIELDS => $params,
-             CURLOPT_RETURNTRANSFER => true,
-             CURLOPT_SSL_VERIFYPEER => false,
-             CURLOPT_TIMEOUT => self::REQUEST_TIMEOUT
-         ));
- 
-         $rawResponse = curl_exec($ch);
-         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-         $error = curl_error($ch);
-         curl_close($ch);
- 
-         if ($rawResponse === false) {
-             throw new Exception('Failed to connect to the Textlocal service: ' . $error);
-         } elseif ($httpCode != 200) {
-             throw new Exception('Bad response from the Textlocal service: HTTP code ' . $httpCode);
-         }
- 
-         return $rawResponse;*/
     }
 
     /**
@@ -179,8 +181,6 @@ class Bulksmsbd
     public function sendSms($numbers, $message, $sched = null, $test = false, $receiptURL = null, $custom = null, $optouts = false, $simpleReplyService = false)
     {
 
-        if (!is_array($numbers))
-            throw new Exception('Invalid $numbers format. Must be an array');
         if (empty($message))
             throw new Exception('Empty message');
         if (!is_null($sched) && !is_numeric($sched))
@@ -197,7 +197,6 @@ class Bulksmsbd
             'optouts' => $optouts,
             'simple_reply' => $simpleReplyService
         );
-
         return $this->_sendRequest('send', $params);
     }
 
@@ -708,14 +707,10 @@ class Bulksmsbd
         return $this->_sendRequest('get_optouts');
     }
 
-    private function formatNumbers($numbers)
+    private function formatNumbers($number)
     {
-        $formattedNumbers = '';
-        foreach ($numbers[0] as $key => $number) {
-
-            $formattedNumbers .= '88' . $number . ',';
-        }
-        return rtrim($formattedNumbers, ',');
+        $number = '88' . $number;
+        return $number;
     }
 }
 

@@ -131,10 +131,20 @@ class Sendsmsmail_model extends CI_Model
 
     public function sendSMS($sendTo, $message, $name, $eMail, $smsGateway)
     {
-
         $message = str_replace('{name}', $name, $message);
         $message = str_replace('{email}', $eMail, $message);
         $message = str_replace('{mobile_no}', $sendTo, $message);
+
+        if ($smsGateway == 'bulksmsbd') {
+            $this->load->library("bulksmsbd");
+
+            $status = $this->bulksmsbd->sendSms($sendTo, $message);
+            if ($status) {
+                return true;
+            } else {
+                return false;
+            }
+        }
         if ($smsGateway == 'twilio') {
             $this->load->library("twilio");
             $get = $this->twilio->get_twilio();
@@ -154,10 +164,7 @@ class Sendsmsmail_model extends CI_Model
             $this->load->library("msg91");
             return $this->msg91->send($sendTo, $message);
         }
-        if ($smsGateway == 'bulksms') {
-            $this->load->library("bulk");
-            return $this->bulk->send($sendTo, $message);
-        }
+
         if ($smsGateway == 'textlocal') {
             $this->load->library("textlocal");
             try {
