@@ -370,6 +370,44 @@ class School_settings extends Admin_Controller
         echo json_encode($array);
     }
 
+    /**
+     * SMS Gateway Saving for BulksmsBD
+     */
+    public function bulksmsbd()
+    {
+        if (!get_permission('sms_settings', 'is_add')) {
+            access_denied();
+        }
+        $branchID = $this->school_model->getBranchID();
+
+        $this->form_validation->set_rules('username', translate('username'), 'trim|required');
+        $this->form_validation->set_rules('password', translate('password'), 'trim|required');
+        if ($this->form_validation->run() !== false) {
+
+            $arrayBulkSmsBD = array(
+                'field_one' => $this->input->post('username'),
+                'field_two' => $this->input->post('password'),
+            );
+            $this->db->where('sms_api_id', 6);
+            $this->db->where('branch_id', $branchID);
+            $q = $this->db->get('sms_credential');
+            if ($q->num_rows() === 0) {
+                $arrayBulkSmsBD['sms_api_id'] = 6;
+                $arrayBulkSmsBD['branch_id'] = $branchID;
+                $this->db->insert('sms_credential', $arrayBulkSmsBD);
+            } else {
+                $this->db->where('id', $q->row()->id);
+                $this->db->update('sms_credential', $arrayBulkSmsBD);
+            }
+            $message = translate('api information for bulksmsbd has_been_saved_successfully');
+            $array = array('status' => 'success', 'message' => $message);
+        } else {
+            $error = $this->form_validation->error_array();
+            $array = array('status' => 'fail', 'error' => $error);
+        }
+        echo json_encode($array);
+    }
+
     public function twilio()
     {
         if (!get_permission('sms_settings', 'is_add')) {

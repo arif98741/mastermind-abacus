@@ -5,6 +5,9 @@
 class Application_model extends CI_Model
 {
 
+    /**
+     * Application_model constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -27,6 +30,10 @@ class Application_model extends CI_Model
 
     }
 
+    /**
+     * Profile Pic Upload
+     * @return bool
+     */
     public function profilePicUpload()
     {
         if (isset($_FILES["user_photo"]) && !empty($_FILES['user_photo']['name'])) {
@@ -51,6 +58,12 @@ class Application_model extends CI_Model
         }
     }
 
+    /**
+     * Get User By Role ID
+     * @param $roleID
+     * @param string $userID
+     * @return mixed
+     */
     public function getUserNameByRoleID($roleID, $userID = '')
     {
         if ($roleID == 6) {
@@ -65,6 +78,15 @@ class Application_model extends CI_Model
         }
     }
 
+    /**
+     * Get Student Details Using Section
+     * @param string $classID
+     * @param string $sectionID
+     * @param string $branchID
+     * @param false $deactivate
+     * @param false $rollOrder
+     * @return mixed
+     */
     public function getStudentListByClassSection($classID = '', $sectionID = '', $branchID = '', $deactivate = false, $rollOrder = false)
     {
         $sql = "SELECT e.*, s.photo, CONCAT(s.first_name, ' ', s.last_name) as fullname, s.register_no, s.parent_id, s.email, s.mobileno, s.blood_group, s.birthday, s.admission_date, l.active, c.name as class_name, se.name as section_name, sc.name as category FROM enroll as e INNER JOIN student as s ON e.student_id = s.id INNER JOIN login_credential as l ON l.user_id = s.id and l.role = 7 LEFT JOIN class as c ON e.class_id = c.id LEFT JOIN section as se ON e.section_id=se.id LEFT JOIN student_category as sc ON sc.id=s.category_id WHERE e.class_id = " . $this->db->escape($classID) . " AND e.branch_id = " . $this->db->escape($branchID) . " AND e.session_id = " . $this->db->escape(get_session_id());
@@ -82,6 +104,11 @@ class Application_model extends CI_Model
         return $this->db->query($sql)->result_array();
     }
 
+    /**
+     * Get Individual Student Details
+     * @param $id
+     * @return mixed
+     */
     public function getStudentDetails($id)
     {
         $this->db->select('s.*,e.class_id,e.section_id,e.id as enrollid,e.roll,e.branch_id,e.session_id,c.name as class_name,se.name as section_name,sc.name as category_name');
@@ -95,6 +122,11 @@ class Application_model extends CI_Model
         return $query->row_array();
     }
 
+    /**
+     * Get SMS Provider ID
+     * @param $branch_id
+     * @return mixed|string
+     */
     public function smsServiceProvider($branch_id)
     {
         $this->db->select('sms_api_id');
@@ -178,7 +210,7 @@ class Application_model extends CI_Model
         return $query->num_rows();
     }
 
-    // unread message alert in topbar
+    // unread message alert in top bar
     public function unread_message_alert()
     {
         $activeUser = loggedin_role_id() . '-' . get_loggedin_user_id();

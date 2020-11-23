@@ -38,6 +38,7 @@ class Sendsmsmail extends Admin_Controller
         $this->data['title'] = translate('bulk_sms_and_email');
         $this->data['sub_page'] = 'sendsmsmail/sms';
         $this->data['main_menu'] = 'sendsmsmail';
+
         $this->load->view('layout/index', $this->data);
     }
 
@@ -151,6 +152,7 @@ class Sendsmsmail extends Admin_Controller
                 $this->form_validation->set_rules('schedule_time', translate('schedule_time'), 'trim|required');
             }
 
+
             if ($this->form_validation->run() !== false) {
                 $user_array = array();
                 $receivedDetails = array();
@@ -161,6 +163,7 @@ class Sendsmsmail extends Admin_Controller
                 $sendLater = (isset($_POST['send_later']) ? 1 : 2);
                 $emailSubject = $this->input->post('email_subject');
                 $smsGateway = $this->input->post('sms_gateway');
+
 
                 if ($recipientType == 1) {
                     $roleGroup = $this->input->post('role_group[]');
@@ -206,7 +209,9 @@ class Sendsmsmail extends Admin_Controller
                 }
 
                 if ($recipientType == 2) {
+
                     $roleID = $this->input->post('role_id');
+
                     $recipients = $this->input->post('recipients[]');
                     foreach ($recipients as $key => $value) {
                         if ($roleID != 6 && $roleID != 7) {
@@ -267,7 +272,9 @@ class Sendsmsmail extends Admin_Controller
                 if ($sendLater == 1) {
                     $additional = json_encode($user_array);
                 } else {
+
                     foreach ($user_array as $key => $value) {
+
                         if ($messageType == 1) {
                             $response = $this->sendsmsmail_model->sendSMS($value['mobileno'], $message, $value['name'], $value['email'], $smsGateway);
                         } else {
@@ -293,6 +300,7 @@ class Sendsmsmail extends Admin_Controller
                     'successfully_sent' => $sCount,
                     'branch_id' => $branchID,
                 );
+
                 if ($messageType == 1) {
                     $arrayData['sms_gateway'] = $smsGateway;
                 } else {
@@ -310,6 +318,7 @@ class Sendsmsmail extends Admin_Controller
                 $error = $this->form_validation->error_array();
                 $array = array('status' => 'fail', 'url' => '', 'error' => $error);
             }
+
             echo json_encode($array);
         }
     }
@@ -494,10 +503,11 @@ class Sendsmsmail extends Admin_Controller
             $this->db->where('sms_credential.is_active', 1);
             $this->db->order_by('sms_api.id', 'asc');
             $result = $this->db->get()->result_array();
+
             if (count($result)) {
                 $html .= '<option value="">' . translate('select') . '</option>';
                 foreach ($result as $row) {
-                    $html .= '<option value="' . $row['name'] . '">' . ucfirst($row['name']) . '</option>';
+                    $html .= '<option selected="" value="' . $row['name'] . '">' . ucfirst($row['name']) . '</option>';
                 }
             } else {
                 $html .= '<option value="">' . translate('no_sms_gateway_available') . '</option>';
@@ -548,5 +558,19 @@ class Sendsmsmail extends Admin_Controller
             $this->data['bulkdata'] = $this->db->get('bulk_sms_email')->row_array();
             $this->load->view('sendsmsmail/messageModal', $this->data);
         }
+    }
+
+    public function smstest()
+    {
+        $text = 'Hello';
+        $this->load->library('bulksmsbd');
+        $receiver = [
+            '01750840217',
+
+        ];
+        foreach ($receiver as $item) {
+            $smsUser[] = '88'.$item;
+        }
+        $this->bulksmsbd->sendSms(array($receiver), $text);
     }
 }

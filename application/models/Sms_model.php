@@ -9,14 +9,19 @@ class Sms_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        $this->load->library("clickatell");
-        $this->load->library("twilio");
-        $this->load->library("msg91");
-        $this->load->library("bulk");
-        $this->load->library("textlocal");
+        $this->load->library("bulksmsbd");
+        //$this->load->library("clickatell");
+        //$this->load->library("twilio");
+        //$this->load->library("msg91");
+        //$this->load->library("bulk");
+        //$this->load->library("textlocal");
     }
 
-    // common function for sending sms
+    /**
+     * This is common function for sending SMS
+     * @param string $data
+     * @param string $id
+     */
     public function send_sms($data = '', $id = '')
     {
         $branchID = $this->application_model->get_branch_id();
@@ -150,18 +155,20 @@ class Sms_model extends CI_Model
 
     public function _send($sms_api, $receiver, $text)
     {
-        if ($sms_api == 2) {
-            $res = $this->clickatell->send_message($receiver, $text);
-        } elseif ($sms_api == 1) {
+        if ($sms_api === 2) {
+            $this->clickatell->send_message($receiver, $text);
+        } elseif ($sms_api === 1) {
             $get = $this->twilio->get_twilio();
             $from = $get['number'];
-            $res = $this->twilio->sms($from, $receiver, $text);
-        } elseif ($sms_api == 4) {
-            $res = $this->bulk->send($receiver, $text);
-        } elseif ($sms_api == 3) {
-            $res = $this->msg91->send($receiver, $text);
-        } elseif ($sms_api == 5) {
-            $res = $this->textlocal->sendSms(array($receiver), $text);
+            $this->twilio->sms($from, $receiver, $text);
+        } elseif ($sms_api === 4) {
+            $this->bulk->send($receiver, $text);
+        } elseif ($sms_api === 3) {
+            $this->msg91->send($receiver, $text);
+        } elseif ($sms_api === 5) {
+            $this->textlocal->sendSms(array($receiver), $text);
+        } elseif ($sms_api === 6) {
+            $this->bulksmsbd->sendSms(array($receiver), $text);
         }
     }
 }

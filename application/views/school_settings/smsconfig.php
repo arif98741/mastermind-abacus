@@ -29,11 +29,12 @@
 												$sms_service_provider = $this->application_model->smsServiceProvider($branch_id);
 												$arraySMS = array(
 													"disabled" 	=> translate('disabled'),
-													"1" 		=> "Twilio",
-													"2" 		=> "Clickatell",
-													"3" 		=> "Msg91",
-													"4" 		=> "Bulk",
-													"5" 		=> "Textlocal",
+                                                    "6" 		=> "bulksmsbd",
+                                                    "1" 		=> "Twilio",
+                                                    "2" 		=> "Clickatell",
+                                                    "3" 		=> "Msg91",
+                                                    "4" 		=> "Bulk",
+                                                    "5" 		=> "Textlocal",
 												);
 												echo form_dropdown("sms_service_provider", $arraySMS, set_value('sms_service', $sms_service_provider), "class='form-control'
 												data-plugin-selectTwo data-width='100%' data-minimum-results-for-search='Infinity' ");
@@ -55,7 +56,45 @@
 						</section>
 
 						<div class="panel-group" id="accordion">
-							<div class="panel panel-accordion">
+                            <div class="panel panel-accordion">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#bulksmsbd">BulksmsBD</a>
+                                    </h4>
+                                </div>
+                                <div id="bulksmsbd" class="accordion-body collapse">
+
+                                    <?php echo form_open('school_settings/bulksmsbd' . $url, array('class' => 'form-horizontal form-bordered frm-submit-msg')); ?>
+                                    <div class="panel-body">
+                                        <div class="form-group mt-md">
+                                            <label  class="col-md-3 control-label"><?=translate('username')?> <span class="required">*</span></label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" name="username" value="<?=$api['textlocal']['field_one']?>">
+                                                <span class="error"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label"><?=translate('password')?> <span class="required">*</span></label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" name="password" value="<?=$api['textlocal']['field_two']?>">
+                                                <span class="error"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-md-2">
+                                                <button type="submit" class="btn btn-default btn-block" data-loading-text="<i class='fas fa-spinner fa-spin'></i> Processing">
+                                                    <i class="fas fa-plus-circle"></i> <?=translate('save')?>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php echo form_close();?>
+                                </div>
+                            </div>
+							<div class="panel panel-accordion" style="display: none">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#twilio">Twilio Gateway</a>
@@ -98,7 +137,7 @@
 									<?php echo form_close();?>
 								</div>
 							</div>
-							<div class="panel panel-accordion">
+							<div class="panel panel-accordion" style="display: none">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#clickatell">Clickatell Gateway</a>
@@ -148,8 +187,7 @@
 									<?php echo form_close();?>
 								</div>
 							</div>
-
-							<div class="panel panel-accordion">
+							<div class="panel panel-accordion" style="display: none">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#msg91">MSG91 Gateway</a>
@@ -185,8 +223,7 @@
 									<?php echo form_close();?>
 								</div>
 							</div>
-
-							<div class="panel panel-accordion">
+							<div class="panel panel-accordion" style="display: none">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#bulk">Bulk Gateway</a>
@@ -222,7 +259,7 @@
 									<?php echo form_close();?>
 								</div>
 							</div>
-							<div class="panel panel-accordion">
+							<div class="panel panel-accordion" style="display: none">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#txtlocal">Text Local Gateway</a>
@@ -265,6 +302,7 @@
 									<?php echo form_close();?>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>

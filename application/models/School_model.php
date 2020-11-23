@@ -10,11 +10,12 @@ class School_model extends MY_Model
 
     public function getBranchID()
     {
-        if (is_superadmin_loggedin()) {
+        return 1;
+        /*if (is_superadmin_loggedin()) {
             return $this->input->get('branch_id', true);
         } else {
             return get_loggedin_branch_id();
-        }
+        }*/
     }
 
     public function branchUpdate($data)
@@ -43,12 +44,13 @@ class School_model extends MY_Model
 
     function getSmsConfig()
     {
-        if (is_superadmin_loggedin()) {
+      /*  if (is_superadmin_loggedin()) {
             $branch_id = $this->input->get('branch_id');
         } else {
             $branch_id = get_loggedin_branch_id();
         }
-
+      */
+        $branch_id = 1;
         $api = array();
         $result = $this->db->get('sms_api')->result();
         foreach ($result as $key => $value) {

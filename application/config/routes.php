@@ -55,3 +55,5 @@ $route['backend'] = 'authentication';
 $route['default_controller'] = 'home';
 $route['404_override'] = 'errors';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['smstest'] = 'sendsmsmail/smstest';
