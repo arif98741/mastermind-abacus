@@ -17,7 +17,11 @@ class Sms_model extends CI_Model
         //$this->load->library("textlocal");
     }
 
-    // common function for sending sms
+    /**
+     * This is common function for sending SMS
+     * @param string $data
+     * @param string $id
+     */
     public function send_sms($data = '', $id = '')
     {
         $branchID = $this->application_model->get_branch_id();

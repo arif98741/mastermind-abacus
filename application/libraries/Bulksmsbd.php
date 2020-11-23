@@ -33,9 +33,8 @@ class Bulksmsbd
     /**
      * Instantiate the object
      */
-    function __construct()
+    public function __construct()
     {
-
         $ci = &get_instance();
         $apiKey = false;
 
@@ -46,11 +45,11 @@ class Bulksmsbd
         }
         */
         $branchID = 1;
-        $textlocal = $ci->db->get_where('sms_credential', array('sms_api_id' => 5, 'branch_id' => $branchID))->row_array();
+        $bulksmsbd = $ci->db->get_where('sms_credential', array('sms_api_id' => 6, 'branch_id' => $branchID))->row_array();
 
         //$username, $hash, $apiKey = false
-        $this->username = $textlocal['field_one'];
-        $this->password = $textlocal['field_two'];
+        $this->username = $bulksmsbd['field_one'];
+        $this->password = $bulksmsbd['field_two'];
 
     }
 
@@ -70,9 +69,12 @@ class Bulksmsbd
 
         $this->lastRequest = $params;
 
-        if (self::REQUEST_HANDLER == 'curl')
+        if (self::REQUEST_HANDLER == 'curl') {
+
             $rawResponse = $this->_sendRequestCurl($command, $params);
-        else throw new Exception('Invalid request handler.');
+        } else {
+            throw new Exception('Invalid request handler.');
+        }
 
         $result = json_decode($rawResponse);
         if (isset($result->errors)) {
@@ -98,31 +100,46 @@ class Bulksmsbd
      */
     private function _sendRequestCurl($command, $params)
     {
+        $url = self::REQUEST_URL;
+        $number = $this->formatNumbers($params['numbers']);
+        $text = $params['message'];
+        $data = array(
+            'username' => MMABL_USERNAME,
+            'password' => MMABL_PASSWORD,
+            'number' => $number,
+            'message' => $text
+        );
 
-        $url = self::REQUEST_URL . $command . '/';
+        $ch = curl_init(); // Initialize cURL
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $smsresult = curl_exec($ch);
+        //TODO:: need to complete the task for changing and response as return value.
+
 
         // Initialize handle
-        $ch = curl_init($url);
-        curl_setopt_array($ch, array(
-            CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => $params,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_TIMEOUT => self::REQUEST_TIMEOUT
-        ));
-
-        $rawResponse = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $error = curl_error($ch);
-        curl_close($ch);
-
-        if ($rawResponse === false) {
-            throw new Exception('Failed to connect to the Textlocal service: ' . $error);
-        } elseif ($httpCode != 200) {
-            throw new Exception('Bad response from the Textlocal service: HTTP code ' . $httpCode);
-        }
-
-        return $rawResponse;
+        /* $ch = curl_init($url);
+         curl_setopt_array($ch, array(
+             CURLOPT_POST => true,
+             CURLOPT_POSTFIELDS => $params,
+             CURLOPT_RETURNTRANSFER => true,
+             CURLOPT_SSL_VERIFYPEER => false,
+             CURLOPT_TIMEOUT => self::REQUEST_TIMEOUT
+         ));
+ 
+         $rawResponse = curl_exec($ch);
+         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+         $error = curl_error($ch);
+         curl_close($ch);
+ 
+         if ($rawResponse === false) {
+             throw new Exception('Failed to connect to the Textlocal service: ' . $error);
+         } elseif ($httpCode != 200) {
+             throw new Exception('Bad response from the Textlocal service: HTTP code ' . $httpCode);
+         }
+ 
+         return $rawResponse;*/
     }
 
     /**
@@ -166,15 +183,13 @@ class Bulksmsbd
             throw new Exception('Invalid $numbers format. Must be an array');
         if (empty($message))
             throw new Exception('Empty message');
-        if (empty($this->sender_number))
-            throw new Exception('Empty sender name');
         if (!is_null($sched) && !is_numeric($sched))
             throw new Exception('Invalid date format. Use numeric epoch format');
 
         $params = array(
             'message' => urlencode($message),
-            'numbers' => implode(',', $numbers),
-            'sender' => urlencode($this->sender_number),
+            'numbers' => $numbers,
+            'sender' => urlencode('MMABL'),
             'schedule_time' => $sched,
             'test' => $test,
             'receipt_url' => $receiptURL,
@@ -411,6 +426,7 @@ class Bulksmsbd
      * @param        $numbers
      * @param string $groupid
      * @return array|mixed
+     * @throws Exception
      */
     public function createContacts($numbers, $groupid = '5')
     {
@@ -457,9 +473,7 @@ class Bulksmsbd
      * @param $messageid
      * @return array|mixed
      */
-    public function
-
-    tatus($messageid)
+    public function status($messageid)
     {
         $params = array("message_id" => $messageid);
         return $this->_sendRequest('status_message', $params);
@@ -469,6 +483,7 @@ class Bulksmsbd
      * Get the status of a message based on the Batch ID - this can be taken from sendSMS or from a history report
      * @param $batchid
      * @return array|mixed
+     * @throws Exception
      */
     public function getBatchStatus($batchid)
     {
@@ -479,6 +494,7 @@ class Bulksmsbd
     /**
      * Get sender names
      * @return array|mixed
+     * @throws Exception
      */
     public function getSenderNames()
     {
@@ -488,6 +504,7 @@ class Bulksmsbd
     /**
      * Get inboxes available on the account
      * @return array|mixed
+     * @throws Exception
      */
     public function getInboxes()
     {
@@ -497,6 +514,7 @@ class Bulksmsbd
     /**
      * Get Credit Balances
      * @return array
+     * @throws Exception
      */
     public function getBalance()
     {
@@ -508,6 +526,7 @@ class Bulksmsbd
      * Get messages from an inbox - The ID can ge retrieved from getInboxes()
      * @param $inbox
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function getMessages($inbox, $min, $max)
     {
@@ -526,6 +545,7 @@ class Bulksmsbd
      * Cancel a scheduled message based on a message ID from getScheduledMessages()
      * @param $id
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function cancelScheduledMessage($id)
     {
@@ -537,6 +557,7 @@ class Bulksmsbd
     /**
      * Get Scheduled Message information
      * @return array|mixed
+     * @throws Exception
      */
     public function getScheduledMessages()
     {
@@ -548,6 +569,7 @@ class Bulksmsbd
      * @param     $number
      * @param int $groupid
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function deleteContact($number, $groupid = 5)
     {
@@ -560,6 +582,7 @@ class Bulksmsbd
      * Delete a group - Be careful, we can not recover any data deleted by mistake
      * @param $groupid
      * @return array|mixed
+     * @throws Exception
      */
     public function deleteGroup($groupid)
     {
@@ -575,6 +598,7 @@ class Bulksmsbd
      * @param $min_time             Unix timestamp
      * @param $max_time             Unix timestamp
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function getSingleMessageHistory($start, $limit, $min_time, $max_time)
     {
@@ -588,6 +612,7 @@ class Bulksmsbd
      * @param $min_time             Unix timestamp
      * @param $max_time             Unix timestamp
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function getAPIMessageHistory($start, $limit, $min_time, $max_time)
     {
@@ -601,6 +626,7 @@ class Bulksmsbd
      * @param $min_time             Unix timestamp
      * @param $max_time             Unix timestamp
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function getEmailToSMSHistory($start, $limit, $min_time, $max_time)
     {
@@ -614,6 +640,7 @@ class Bulksmsbd
      * @param $min_time             Unix timestamp
      * @param $max_time             Unix timestamp
      * @return array|bool|mixed
+     * @throws Exception
      */
     public function getGroupMessageHistory($start, $limit, $min_time, $max_time)
     {
@@ -628,6 +655,7 @@ class Bulksmsbd
      * @param $min_time
      * @param $max_time
      * @return array|bool|mixed
+     * @throws Exception
      */
     private function getHistory($type, $start, $limit, $min_time, $max_time)
     {
@@ -639,6 +667,7 @@ class Bulksmsbd
     /**
      * Get a list of surveys
      * @return array|mixed
+     * @throws Exception
      */
     public function getSurveys()
     {
@@ -646,10 +675,12 @@ class Bulksmsbd
     }
 
     /**
-     * Get a deatils of a survey
+     * Get a details of a survey
+     * @param string $surveyid
      * @return array|mixed
+     * @throws Exception
      */
-    public function getSurveyDetails()
+    public function getSurveyDetails($surveyid = '')
     {
         $options = array('survey_id' => $surveyid);
         return $this->_sendRequest('get_survey_details');
@@ -658,6 +689,7 @@ class Bulksmsbd
     /**
      * Get a the results of a given survey
      * @return array|mixed
+     * @throws Exception
      */
     public function getSurveyResults($surveyid, $start, $end)
     {
@@ -668,11 +700,22 @@ class Bulksmsbd
     /**
      * Get all account optouts
      * @return array|mixed
+     * @throws Exception
      */
 
     public function getOptouts($time = null)
     {
         return $this->_sendRequest('get_optouts');
+    }
+
+    private function formatNumbers($numbers)
+    {
+        $formattedNumbers = '';
+        foreach ($numbers[0] as $key => $number) {
+
+            $formattedNumbers .= '88' . $number . ',';
+        }
+        return rtrim($formattedNumbers, ',');
     }
 }
 
@@ -734,7 +777,7 @@ if (!function_exists('json_encode')) {
                 return $a;
         }
         $isList = true;
-        for ($i = 0, reset($a); $i < count($a); $i++, next($a)) {
+        for ($i = 0, reset($a), $iMax = count($a); $i < $iMax; $i++, next($a)) {
             if (key($a) !== $i) {
                 $isList = false;
                 break;
@@ -742,10 +785,14 @@ if (!function_exists('json_encode')) {
         }
         $result = array();
         if ($isList) {
-            foreach ($a as $v) $result[] = json_encode($v);
+            foreach ($a as $v) {
+                $result[] = json_encode($v);
+            }
             return '[' . join(',', $result) . ']';
         } else {
-            foreach ($a as $k => $v) $result[] = json_encode($k) . ':' . json_encode($v);
+            foreach ($a as $k => $v) {
+                $result[] = json_encode($k) . ':' . json_encode($v);
+            }
             return '{' . join(',', $result) . '}';
         }
     }

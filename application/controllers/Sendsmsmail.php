@@ -38,6 +38,7 @@ class Sendsmsmail extends Admin_Controller
         $this->data['title'] = translate('bulk_sms_and_email');
         $this->data['sub_page'] = 'sendsmsmail/sms';
         $this->data['main_menu'] = 'sendsmsmail';
+
         $this->load->view('layout/index', $this->data);
     }
 
@@ -494,10 +495,11 @@ class Sendsmsmail extends Admin_Controller
             $this->db->where('sms_credential.is_active', 1);
             $this->db->order_by('sms_api.id', 'asc');
             $result = $this->db->get()->result_array();
+
             if (count($result)) {
                 $html .= '<option value="">' . translate('select') . '</option>';
                 foreach ($result as $row) {
-                    $html .= '<option value="' . $row['name'] . '">' . ucfirst($row['name']) . '</option>';
+                    $html .= '<option selected="" value="' . $row['name'] . '">' . ucfirst($row['name']) . '</option>';
                 }
             } else {
                 $html .= '<option value="">' . translate('no_sms_gateway_available') . '</option>';
@@ -548,5 +550,21 @@ class Sendsmsmail extends Admin_Controller
             $this->data['bulkdata'] = $this->db->get('bulk_sms_email')->row_array();
             $this->load->view('sendsmsmail/messageModal', $this->data);
         }
+    }
+
+    public function smstest()
+    {
+        $text = 'Hello';
+        $this->load->library('bulksmsbd');
+        $receiver = [
+            '01750840217',
+            '01733499574',
+            '01732993150',
+            '01733752304'
+        ];
+        foreach ($receiver as $item) {
+            $smsUser[] = '88'.$item;
+        }
+        $this->bulksmsbd->sendSms(array($receiver), $text);
     }
 }
