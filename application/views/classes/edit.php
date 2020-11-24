@@ -2,15 +2,15 @@
 	<div class="tabs-custom">
 		<ul class="nav nav-tabs">
 			<li>
-				<a href="<?=base_url('classes')?>"><i class="fas fa-graduation-cap"></i> <?=translate('class')?></a>
+				<a href="<?=base_url('classes')?>"><i class="fas fa-graduation-cap"></i> Level</a>
 			</li>
 <?php if (get_permission('section', 'is_view')): ?>
 			<li>
-				<a href="<?=base_url('sections')?>"><i class="fas fa-award"></i> <?=translate('section')?></a>
+				<a href="<?=base_url('sections')?>"><i class="fas fa-award"></i> Batch</a>
 			</li>
 <?php endif; ?>
 			<li class="active">
-				<a href="#edit" data-toggle="tab"><i class="fas fa-pen-nib"></i> <?=translate('edit_class')?></a>
+				<a href="#edit" data-toggle="tab"><i class="fas fa-pen-nib"></i> Edit Level</a>
 			</li>
 		</ul>
 		<div class="tab-content">
@@ -38,14 +38,14 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label"><?=translate('class_numeric')?></label>
+						<label class="col-md-3 control-label">Level Numeric</label>
 						<div class="col-md-6">
 							<input type="number" class="form-control" name="name_numeric" value="<?=$class['name_numeric']?>"/>
 							<span class="error"></span>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-3 control-label"><?=translate('section')?> <span class="required">*</span></label>
+						<label class="col-md-3 control-label">Batch<span class="required">*</span></label>
 						<div class="col-md-6 mb-md">
 							<?php
 								$query = $this->db->get_where("sections_allocation", array('class_id' => $class['id']))->result_array();
