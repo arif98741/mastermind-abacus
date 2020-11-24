@@ -12,6 +12,7 @@ if cd /var/www/html/mastermindabacusbd.com; then
 	echo "Using PHP Version : "
 	php -v
 	echo \
+
 	echo "Git Remote: "
 	git remote -v
 	echo \
