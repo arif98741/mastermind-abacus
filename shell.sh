@@ -18,7 +18,7 @@ if cd /var/www/html/mastermindabacusbd.com; then
 	echo \
 
  	sudo git branch
-	sudo git fetch --all
+	#sudo git fetch --all
 	sudo git checkout production
 	sudo git  pull
 	sudo git merge dev
