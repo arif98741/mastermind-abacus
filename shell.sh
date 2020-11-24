@@ -10,7 +10,6 @@ if cd /var/www/html/mastermindabacusbd.com; then
 	echo "----Version: 1.0.0---"
 	echo "--https://github.com/arif98741----"
 	echo "Using PHP Version : "
-	echo \
 	php -v
 	echo \
 	echo "Git Remote: "
