@@ -17,8 +17,11 @@ if cd /var/www/html/mastermindabacusbd.com; then
 	git remote -v
 	echo \
 
-  sudo git branch
+ 	sudo git branch
+	sudo git fetch --all
+	sudo git checkout production
 	sudo git  pull
+	sudo git merge dev
 	echo \
 	echo "Getting data from branch: production"
 
