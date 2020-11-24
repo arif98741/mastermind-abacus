@@ -9,9 +9,9 @@ if cd /var/www/html/mastermindabacusbd.com; then
 	echo "Created By: Ariful Islam"
 	echo "----Version: 1.0.0---"
 	echo "--https://github.com/arif98741----"
+	echo "=========================================================="
 	echo "Using PHP Version : "
-	php -v
-	echo \
+  php -v
 
 	echo "Git Remote: "
 	git remote -v
