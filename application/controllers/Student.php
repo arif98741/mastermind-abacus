@@ -428,6 +428,7 @@ class Student extends Admin_Controller
         }
         $this->load->model('fees_model');
         $this->load->model('exam_model');
+        $getBranch = $this->getBranchDetails();
         $getStudent = $this->student_model->getSingleStudent($id);
         if (isset($_POST['update'])) {
             $this->session->set_flashdata('profile_tab', 1);
@@ -437,7 +438,7 @@ class Student extends Admin_Controller
             if ($this->form_validation->run() == true) {
                 $post = $this->input->post();
                 //save all student information in the database file
-                $studentID = $this->student_model->save($post);
+                $studentID = $this->student_model->save($post,$getBranch);
                 //save student enroll information in the database file
                 $arrayEnroll = array(
                     'class_id' => $this->input->post('class_id'),

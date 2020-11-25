@@ -21,7 +21,7 @@ class Student_model extends MY_Model
             'qualification' => $data['qualification'],
             'remarks' => $data['previous_remarks'],
         );
-        $inser_data1 = array(
+        $insert_data1 = array(
             'register_no' => $data['register_no'],
             'admission_date' => date("Y-m-d", strtotime($data['admission_date'])),
             'first_name' => $data['first_name'],
@@ -90,9 +90,9 @@ class Student_model extends MY_Model
                 $parentID = $data['parent_id'];
             }
 
-            $inser_data1['parent_id'] = $parentID;
+            $insert_data1['parent_id'] = $parentID;
             // insert student all information in the database
-            $this->db->insert('student', $inser_data1);
+            $this->db->insert('student', $insert_data1);
             $student_id = $this->db->insert_id();
 
             // save student login credential information in the database
@@ -134,9 +134,9 @@ class Student_model extends MY_Model
             return $student_id;
         } else {
             // update student all information in the database
-            $inser_data1['parent_id'] = $data['parent_id'];
+            $insert_data1['parent_id'] = $data['parent_id'];
             $this->db->where('id', $data['student_id']);
-            $this->db->update('student', $inser_data1);
+            $this->db->update('student', $insert_data1);
 
             // update login credential information in the database
             $this->db->where('user_id', $data['student_id']);
