@@ -19,11 +19,10 @@ if cd /var/www/html/mastermindabacusbd.com; then
 
  	sudo git branch
 	#sudo git fetch --all
-	sudo git checkout production
+	sudo git checkout production_abacus
 	sudo git  pull
-	sudo git merge dev
 	echo \
-	echo "Getting data from branch: production"
+	echo "Getting data from branch: production_abacus"
 
 	echo \
 	echo "Thanks for using shell command"
