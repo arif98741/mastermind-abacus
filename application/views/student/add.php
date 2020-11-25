@@ -46,7 +46,7 @@ $this->db->delete('custom_fields_values');
 						</div>
 					</div>
 					
-					<div class="col-md-3 mb-sm">
+					<div class="col-md-3 mb-sm" style="display: none">
 						<div class="form-group">
 							<label class="control-label"><?=translate('register_no')?> <span class="required">*</span></label>
 							<input type="text" class="form-control" name="register_no" value="<?=set_value('register_no', $register_id)?>" />
@@ -61,7 +61,7 @@ $this->db->delete('custom_fields_values');
 							<span class="error"><?=form_error('roll')?></span>
 						</div>
 					</div>
-					<div class="col-md-3 mb-sm">
+					<div class="col-md-6 mb-sm">
 						<div class="form-group">
 							<label class="control-label"><?=translate('admission_date')?> <span class="required">*</span></label>
 							<div class="input-group">
@@ -436,7 +436,7 @@ $this->db->delete('custom_fields_values');
 					</div>
 					<div class="<?=$getBranch['grd_generate'] == 1 || $getBranch['grd_generate'] == "" ? 'hidden-div' : ''?>" id="grdLogin">
 						<div class="row mb-lg">
-							<div class="col-md-6 mb-sm">
+							<div class="col-md-6 mb-sm" style="display: none">
 								<div class="form-group">
 									<label class="control-label"><?=translate('usename')?> <span class="required">*</span></label>
 									<div class="input-group">
@@ -446,7 +446,7 @@ $this->db->delete('custom_fields_values');
 									<span class="error"><?=form_error('grd_username')?></span>
 								</div>
 							</div>
-							<div class="col-md-3 mb-sm">
+							<div class="col-md-3 mb-sm" style="display: none">
 								<div class="form-group">
 									<label class="control-label"><?=translate('password')?> <span class="required">*</span></label>
 									<div class="input-group">
@@ -456,7 +456,7 @@ $this->db->delete('custom_fields_values');
 									<span class="error"><?=form_error('grd_password')?></span>
 								</div>
 							</div>
-							<div class="col-md-3 mb-sm">
+							<div class="col-md-3 mb-sm" style="display: none">
 								<div class="form-group">
 									<label class="control-label"><?=translate('retype_password')?> <span class="required">*</span></label>
 									<div class="input-group">

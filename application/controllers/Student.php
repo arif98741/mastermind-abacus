@@ -39,6 +39,7 @@ class Student extends Admin_Controller
         $getBranch = $this->getBranchDetails();
         $branchID = $this->application_model->get_branch_id();
         if (isset($_POST['save'])) {
+
             $this->student_validation();
             if (!isset($_POST['guardian_chk'])) {
                 $this->form_validation->set_rules('grd_name', translate('name'), 'trim|required');
@@ -47,9 +48,11 @@ class Student extends Admin_Controller
                 $this->form_validation->set_rules('grd_mobileno', translate('mobile_no'), 'trim|required');
                 $this->form_validation->set_rules('grd_email', translate('email'), 'trim|valid_email');
                 if ($getBranch['grd_generate'] == 0) {
-                    $this->form_validation->set_rules('grd_username', translate('username'), 'trim|required|callback_get_valid_guardian_username');
-                    $this->form_validation->set_rules('grd_password', translate('password'), 'trim|required');
-                    $this->form_validation->set_rules('grd_retype_password', translate('retype_password'), 'trim|required|matches[grd_password]');
+                    //gurdian login details is currently disabled on
+                    //the system as well
+                    // $this->form_validation->set_rules('grd_username', translate('username'), 'trim|required|callback_get_valid_guardian_username');
+                    // $this->form_validation->set_rules('grd_password', translate('password'), 'trim|required');
+                    // $this->form_validation->set_rules('grd_retype_password', translate('retype_password'), 'trim|required|matches[grd_password]');
                 }
             } else {
                 $this->form_validation->set_rules('parent_id', translate('guardian'), 'required');
@@ -110,7 +113,8 @@ class Student extends Admin_Controller
             $this->form_validation->set_rules('branch_id', translate('branch'), 'trim|required');
         }
         $this->form_validation->set_rules('year_id', translate('academic_year'), 'trim|required');
-        $this->form_validation->set_rules('register_no', translate('register_no'), 'trim|required');
+        //registration is not required at this moment
+        $this->form_validation->set_rules('register_no', translate('register_no'), 'trim');
         $this->form_validation->set_rules('admission_date', translate('admission_date'), 'trim|required');
         $this->form_validation->set_rules('class_id', translate('class'), 'trim|required');
         $this->form_validation->set_rules('section_id', translate('section'), 'trim|required');
@@ -438,7 +442,7 @@ class Student extends Admin_Controller
             if ($this->form_validation->run() == true) {
                 $post = $this->input->post();
                 //save all student information in the database file
-                $studentID = $this->student_model->save($post,$getBranch);
+                $studentID = $this->student_model->save($post, $getBranch);
                 //save student enroll information in the database file
                 $arrayEnroll = array(
                     'class_id' => $this->input->post('class_id'),
