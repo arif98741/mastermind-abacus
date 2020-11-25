@@ -2,15 +2,15 @@
 	<div class="tabs-custom">
 		<ul class="nav nav-tabs">
 			<li>
-				<a href="<?=base_url('classes')?>"><i class="fas fa-graduation-cap"></i> Level</a>
+				<a href="<?=base_url('classes')?>"><i class="fas fa-graduation-cap"></i> <?= translate('class') ?></a>
 			</li>
 <?php if (get_permission('section', 'is_view')): ?>
 			<li>
-				<a href="<?=base_url('sections')?>"><i class="fas fa-award"></i> Batch</a>
+				<a href="<?=base_url('sections')?>"><i class="fas fa-award"></i> <?= translate('batch') ?></a>
 			</li>
 <?php endif; ?>
 			<li class="active">
-				<a href="#edit" data-toggle="tab"><i class="fas fa-pen-nib"></i> Edit Level</a>
+				<a href="#edit" data-toggle="tab"><i class="fas fa-pen-nib"></i><?= translate('edit_class') ?></a>
 			</li>
 		</ul>
 		<div class="tab-content">

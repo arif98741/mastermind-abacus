@@ -3,11 +3,11 @@
 		<ul class="nav nav-tabs">
 <?php if (get_permission('classes', 'is_view')): ?>
 			<li>
-				<a href="<?=base_url('classes')?>"><i class="fas fa-graduation-cap"></i> Level</a>
+				<a href="<?=base_url('classes')?>"><i class="fas fa-graduation-cap"></i> <?= translate('class') ?></a>
 			</li>
 <?php endif; ?>
 			<li class="active">
-				<a href="<?=base_url('sections')?>"><i class="fas fa-award"></i> Batch</a>
+				<a href="<?=base_url('sections')?>"><i class="fas fa-award"></i> <?= translate('section') ?></a>
 			</li>
 		</ul>
 		<div class="tab-content">
@@ -18,7 +18,7 @@
 						<section class="panel panel-custom">
 							<?php echo form_open('sections/save', array('class' => 'frm-submit'));?>
 								<div class="panel-heading panel-heading-custom">
-									<h4 class="panel-title"><i class="far fa-edit"></i>Create Batch</h4>
+									<h4 class="panel-title"><i class="far fa-edit"></i><?= translate('create_section') ?></h4>
 								</div>
 								<div class="panel-body panel-body-custom">
 								<?php if (is_superadmin_loggedin()): ?>
@@ -66,7 +66,7 @@
 											<tr>
 												<th>#</th>
 												<th><?=translate('branch')?></th>
-												<th>Batch Name</th>
+												<th><?= translate('section_name') ?></th>
 												<th><?=translate('capacity ')?></th>
 												<th><?=translate('action')?></th>
 											</tr>

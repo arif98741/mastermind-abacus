@@ -2,11 +2,11 @@
     <div class="tabs-custom">
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="<?= base_url('classes') ?>"><i class="fas fa-graduation-cap"></i> Level</a>
+                <a href="<?= base_url('classes') ?>"><i class="fas fa-graduation-cap"></i> <?= translate('class') ?></a>
             </li>
             <?php if (get_permission('section', 'is_view')): ?>
                 <li>
-                    <a href="<?= base_url('sections') ?>"><i class="fas fa-award"></i> Batch</a>
+                    <a href="<?= base_url('sections') ?>"><i class="fas fa-award"></i> <?= translate('branch') ?></a>
                 </li>
             <?php endif; ?>
         </ul>
@@ -17,7 +17,7 @@
                         <div class="col-md-5 pr-xs">
                             <section class="panel panel-custom">
                                 <div class="panel-heading panel-heading-custom">
-                                    <h4 class="panel-title"><i class="far fa-edit"></i> Create Level</h4>
+                                    <h4 class="panel-title"><i class="far fa-edit"></i> <?= translate('create_class') ?></h4>
                                 </div>
                                 <?php echo form_open($this->uri->uri_string(), array('class' => 'frm-submit')); ?>
                                 <div class="panel-body panel-body-custom">
@@ -40,7 +40,7 @@
                                         <span class="error"></span>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Level Numeric</label>
+                                        <label class="control-label"><?= translate('class_numeric') ?></label>
                                         <input type="text" class="form-control" name="name_numeric" value=""/>
                                         <span class="error"></span>
                                     </div>
@@ -79,7 +79,7 @@
                     } ?>">
                         <section class="panel panel-custom">
                             <header class="panel-heading panel-heading-custom">
-                                <h4 class="panel-title"><i class="fas fa-list-ul"></i> Level List</h4>
+                                <h4 class="panel-title"><i class="fas fa-list-ul"></i><?= translate('class_list') ?></h4>
                             </header>
                             <div class="panel-body panel-body-custom">
                                 <div class="table-responsive">
@@ -88,8 +88,8 @@
                                         <tr>
                                             <th>#</th>
                                             <th><?= translate('branch') ?></th>
-                                            <th>Level Name</th>
-                                            <th>Level Numeric</th>
+                                            <th><?= translate('class_name') ?></th>
+                                            <th><?= translate('class_numeric') ?></th>
                                             <th>Batch</th>
                                             <th><?= translate('action') ?></th>
                                         </tr>
