@@ -46,7 +46,7 @@ $this->db->delete('custom_fields_values');
 						</div>
 					</div>
 					
-					<div class="col-md-3 mb-sm" style="display: none">
+					<div class="col-md-3 mb-sm" >
 						<div class="form-group">
 							<label class="control-label"><?=translate('register_no')?> <span class="required">*</span></label>
 							<input type="text" class="form-control" name="register_no" value="<?=set_value('register_no', $register_id)?>" />

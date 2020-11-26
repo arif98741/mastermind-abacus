@@ -114,7 +114,7 @@ class Student extends Admin_Controller
         }
         $this->form_validation->set_rules('year_id', translate('academic_year'), 'trim|required');
         //registration is not required at this moment
-        $this->form_validation->set_rules('register_no', translate('register_no'), 'trim');
+        $this->form_validation->set_rules('register_no', translate('register_no'), 'trim|required');
         $this->form_validation->set_rules('admission_date', translate('admission_date'), 'trim|required');
         $this->form_validation->set_rules('class_id', translate('class'), 'trim|required');
         $this->form_validation->set_rules('section_id', translate('section'), 'trim|required');
