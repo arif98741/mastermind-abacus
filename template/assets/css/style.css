@@ -10,3 +10,27 @@
     info@mastermindabacusbd.com
 =========================================================================
  */
+.w3l-index1 li {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    list-style: upper-latin;
+    text-transform: uppercase;
+    border: 1px solid #0d2147;
+    padding: 10px;
+}
+
+table#courseStructureTable {
+
+}
+
+table#courseStructureTable tr th,
+table#courseStructureTable tr td {
+    padding: 8px;
+}
+
+.navbar-brand img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100px;
+}
