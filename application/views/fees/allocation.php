@@ -10,6 +10,7 @@
 				<div class="row mb-sm">
 				<?php if (is_superadmin_loggedin() ): ?>
 					<div class="col-md-3">
+
 						<div class="form-group">
 							<label class="control-label"><?=translate('branch')?> <span class="required">*</span></label>
 							<?php
@@ -64,9 +65,14 @@
 
 		<?php if (isset($studentlist)):?>
 		<section class="panel appear-animation" data-appear-animation="<?=$global_config['animations'] ?>" data-appear-animation-delay="100">
+
 			<?php echo form_open($this->uri->uri_string());?>
+
 			<input type="hidden" name="fee_group_id" value="<?=$fee_group_id; ?>" >
 			<input type="hidden" name="branch_id" value="<?=$branch_id; ?>" >
+			<input type="hidden" name="class_id" value="<?=$_POST['class_id']; ?>" >
+			<input type="hidden" name="section_id" value="<?=$_POST['section_id']; ?>" >
+
 			<header class="panel-heading">
 				<h4 class="panel-title"><i class="fas fa-list"></i> <?php echo translate('student_list');?></h4>
 			</header>

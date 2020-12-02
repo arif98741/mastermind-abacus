@@ -396,6 +396,7 @@ class Fees extends Admin_Controller
             access_denied();
         }
         $branchID = $this->application_model->get_branch_id();
+
         if (isset($_POST['search'])) {
             $this->data['class_id'] = $this->input->post('class_id');
             $this->data['section_id'] = $this->input->post('section_id');
@@ -403,28 +404,65 @@ class Fees extends Admin_Controller
             $this->data['branch_id'] = $branchID;
             $this->data['studentlist'] = $this->fees_model->getStudentAllocationList($this->data['class_id'], $this->data['section_id'], $this->data['fee_group_id'], $branchID);
         }
-        if (isset($_POST['save'])) {
+
+        if (isset($_POST['save'])) { //if post request
+
             $student_array = $this->input->post('stu_operations');
-            $fee_groupID = $this->input->post('fee_group_id');
+            $classId = $this->input->post('class_id');
+            $sectionId = $this->input->post('section_id');
+            $feeGroupId = $this->input->post('fee_group_id');
+
+
+            $select = $this->db->where([
+                'group_id' => $feeGroupId,
+                'class_id' => $classId,
+                'section_id' => $sectionId,
+                'session_id' => get_session_id(),
+            ])->get('fee_allocation');
+
+            $result = $select->result();
+            $dbStudents = array_column($result, 'student_id');
+            $differance = array_merge(array_diff($student_array, $dbStudents), array_diff($dbStudents, $student_array));
+
+            foreach ($differance as $diff) {
+
+                $this->db->where('student_id', $diff);
+                $this->db->where('class_id', $classId);
+                $this->db->where('section_id', $sectionId);
+                $this->db->where('group_id', $feeGroupId);
+                $this->db->where('session_id', get_session_id());
+                $this->db->delete('fee_allocation');
+            }
+
             foreach ($student_array as $key => $value) {
+
                 $arrayData = array(
                     'student_id' => $value,
-                    'group_id' => $fee_groupID,
+                    'class_id' => $classId,
+                    'section_id' => $sectionId,
+                    'group_id' => $feeGroupId,
                     'session_id' => get_session_id(),
                     'branch_id' => $branchID,
                 );
-                $this->db->where($arrayData);
-                $q = $this->db->get('fee_allocation');
-                if ($q->num_rows() == 0) {
+
+                $q = $this->db->where($arrayData)
+                    ->get('fee_allocation');
+                if ($q->num_rows() === 0) {
                     $this->db->insert('fee_allocation', $arrayData);
                 }
+
             }
-            if (!empty($student_array)) {
+
+
+            /*if (!empty($student_array)) {
                 $this->db->where_not_in('student_id', $student_array);
             }
-            $this->db->where('group_id', $fee_groupID);
+
+            $this->db->where('group_id', $feeGroupId);
             $this->db->where('session_id', get_session_id());
             $this->db->delete('fee_allocation');
+            */
+            //exit;
             set_alert('success', translate('information_has_been_saved_successfully'));
             redirect(base_url('fees/allocation'));
         }
