@@ -50,6 +50,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+
+$route['about'] = 'home/about';
 $route['backend'] = 'authentication';
 $route['gurdian-login'] = 'authentication';
 $route['default_controller'] = 'home';

@@ -12,18 +12,17 @@ class Home extends Frontend_Controller
         $this->load->model('testimonial_model');
     }
 
-    public function index()
+    public function index(): void
     {
         $this->home();
     }
 
     public function home()
     {
-        $branchID = $this->home_model->getDefaultBranch();
-        $this->data['branchID'] = $branchID;
-        $this->data['page_data'] = $this->home_model->get('front_cms_home_seo', array('branch_id' => $branchID), true);
-        $this->data['main_contents'] = $this->load->view('home/index', $this->data, true);
-        $this->load->view('home/layout/index', $this->data);
+       $this->load->view('home/front/lib/header');
+       $this->load->view('home/front/partials/slider');
+       $this->load->view('home/front/index');
+       $this->load->view('home/front/lib/footer');
     }
 
     public function about()
