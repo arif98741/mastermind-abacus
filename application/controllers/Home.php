@@ -27,11 +27,19 @@ class Home extends Frontend_Controller
 
     public function about()
     {
-        $branchID = $this->home_model->getDefaultBranch();
-        $this->data['branchID'] = $branchID;
-        $this->data['page_data'] = $this->home_model->get('front_cms_about', array('branch_id' => $branchID), true);
-        $this->data['main_contents'] = $this->load->view('home/about', $this->data, true);
-        $this->load->view('home/layout/index', $this->data);
+        $this->load->view('home/front/lib/header');
+        $this->load->view('home/front/about');
+        $this->load->view('home/front/lib/footer');
+    }
+
+    /**
+     * This is program overview Static View page
+     */
+    public function programOverview()
+    {
+        $this->load->view('home/front/lib/header');
+        $this->load->view('home/front/program-overview');
+        $this->load->view('home/front/lib/footer');
     }
 
     public function faq()

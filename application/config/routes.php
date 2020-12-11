@@ -52,6 +52,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 $route['about'] = 'home/about';
+$route['admission'] = 'home/admission';
+$route['about'] = 'home/about';
+$route['contact'] = 'home/contact';
+$route['faq'] = 'home/faq';
+$route['program-overview'] = 'home/programOverview';
+
+
 $route['backend'] = 'authentication';
 $route['gurdian-login'] = 'authentication';
 $route['default_controller'] = 'home';

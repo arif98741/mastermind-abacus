@@ -16659,6 +16659,7 @@ button.owl-next {
 
 .w3l-footer-29-main .footer-list-29 ul li a:hover {
     color: var(--opposite-color);
+    cursor: pointer;
 }
 
 .w3l-footer-29-main .main-social-footer-29 a {

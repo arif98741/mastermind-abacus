@@ -45,11 +45,11 @@
                 <div class="footer-list-29 footer-4">
                     <ul>
                         <h6 class="footer-title-29">Quick Links</h6>
-                        <li><a href="admission.html">Admission</a></li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#"> Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
+                        <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                        <li><a href="<?php echo base_url(); ?>about">About</a></li>
+<!--                        <li><a href="#"> Blog</a></li>-->
+                        <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
