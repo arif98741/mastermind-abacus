@@ -254,4 +254,19 @@
             }
         });
     });
+
+    function getSectionByClass(class_id) {
+
+        alert('hello');
+        $.ajax({
+            url: base_url + 'home/getSectionByClass',
+            type: 'POST',
+            data: {
+                class_id: class_id
+            },
+            success: function (response) {
+                $('#section_id').html(response);
+            }
+        });
+    }
 </script>

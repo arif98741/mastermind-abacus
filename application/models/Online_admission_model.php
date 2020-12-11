@@ -123,6 +123,11 @@ class Online_admission_model extends MY_Model
         return $student_id;
     }
 
+    /**
+     * @param string $class_id
+     * @param string $branch_id
+     * @return mixed
+     */
     public function getOnlineAdmission($class_id = '', $branch_id = '')
     {
         $this->db->select('oa.*,c.name as class_name,se.name as section_name');
@@ -132,6 +137,22 @@ class Online_admission_model extends MY_Model
         $this->db->where('oa.class_id', $class_id);
         $this->db->where('oa.branch_id', $branch_id);
         $this->db->order_by('oa.id', 'ASC');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    /**
+     * @param string $class_id
+     * @param string $branch_id
+     * @return mixed
+     */
+    public function getOnlineAdmissionNewPending()
+    {
+        $this->db->select('oa.*,c.name as class_name,se.name as section_name');
+        $this->db->from('online_admission as oa');
+        $this->db->join('class as c', 'oa.class_id = c.id', 'left');
+        $this->db->join('section as se', 'oa.section_id = se.id', 'left');
+        $this->db->order_by('oa.id', 'desc');
         $query = $this->db->get();
         return $query->result_array();
     }

@@ -10,7 +10,7 @@
                             <div class="container">
                                 <div class="banner-info-bg mx-auto text-center">
                                     <h5>Better Education For A Better World</h5>
-                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="services.html">Read
+                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="<?php echo base_url(); ?>admission">Read
                                         More</a>
                                 </div>
 
@@ -26,7 +26,7 @@
                             <div class="container">
                                 <div class="banner-info-bg mx-auto text-center">
                                     <h5>Explore The World Of Our Graduates</h5>
-                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="services.html">Read
+                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="<?php echo base_url(); ?>admission">Read
                                         More</a>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                             <div class="container">
                                 <div class="banner-info-bg mx-auto text-center">
                                     <h5>Exceptional People, Exceptional Care</h5>
-                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="services.html">Read
+                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="<?php echo base_url(); ?>admission">Read
                                         More</a>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                             <div class="container">
                                 <div class="banner-info-bg mx-auto text-center">
                                     <h5>Explore The World Of Our Graduates</h5>
-                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="services.html">Read
+                                    <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="<?php echo base_url(); ?>admission">Read
                                         More</a>
                                 </div>
                             </div>

@@ -127,7 +127,7 @@
             margin: 0,
             nav: true,
             responsiveClass: true,
-            autoplay: false,
+            autoplay: true,
             autoplayTimeout: 5000,
             autoplaySpeed: 1000,
             autoplayHoverPause: false,
