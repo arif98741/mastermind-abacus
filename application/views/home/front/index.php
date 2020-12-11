@@ -312,7 +312,7 @@
                     </div>
                 </div>
                 <div class="column2">
-                    <a class="btn btn-secondary btn-theme2 mt-3" href="admission.html"> Apply Here</a>
+                    <a class="btn btn-secondary btn-theme2 mt-3" href="<?php echo base_url(); ?>admission"> Apply Here</a>
                 </div>
             </div>
         </div>
