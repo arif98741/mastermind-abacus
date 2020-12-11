@@ -87,6 +87,7 @@ class Home extends Frontend_Controller
             redirect(site_url('home'));
         }
         $branchID = $this->home_model->getDefaultBranch();
+
         $captcha = $this->data['cms_setting']['captcha_status'];
         if ($captcha == 'enable') {
             $this->load->library('recaptcha');
@@ -171,7 +172,11 @@ class Home extends Frontend_Controller
         $this->data['branchID'] = $branchID;
         $this->data['page_data'] = $this->home_model->get('front_cms_admission', array('branch_id' => $branchID), true);
         $this->data['main_contents'] = $this->load->view('home/admission', $this->data, true);
-        $this->load->view('home/layout/index', $this->data);
+
+        $this->load->view('home/front/lib/header',$this->data);
+        $this->load->view('home/front/admission');
+        $this->load->view('home/front/lib/footer');
+       // $this->load->view('home/layout/index', $this->data)
     }
 
     public function contact()
