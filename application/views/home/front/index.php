@@ -224,78 +224,7 @@
 </section>
 <!-- features-4 block -->
 
-<!-- features-4 block -->
-<section class="w3l-index1">
-    <div class="calltoaction-20">
-        <div class="container ">
-            <div class="calltoaction-20-content row">
 
-                <div class="col-lg-12">
-                    <h2 class="text-center">BE AN ABACUS FRANCHISE:</h2>
-
-                    <p class="">FRANCHISE DETAILS MASTER MIND ABACUS– A business opportunity with the global presence of
-                        more than 2000+ Abacus franchise...Read On!
-                    </p>
-                    <p>
-                        Master Mind has a global presence with more than 2000+ Abacus franchise in India and abroad.
-                        With more than 18 years of experience in the education industry, Master Mind has shared gigantic
-                        success with all its franchises and associates. Our endeavor is to make Master Mind Abacus an
-                        enjoyable & memorable experience for our children.</p>
-
-                    <p> Master Mind USP: EXCELLENT COURSE MATERIALS: Master Mind Abacus offers the best course material
-                        in the industry, both in terms of content and quality. PLAY AND LEARN CONCEPT: Master Mind
-                        Abacus offers a joyful experience for children, through games incorporated in books and through
-                        speed building software.</p>
-
-                    <p> INNOVATIVE TRAINING TECHNIQUES: The innovative concept of scoreboard and point cards adds to the
-                        delight of teachers by providing ease and convenience of teaching to the students. USE OF
-                        TECHNOLOGY: Master Mind Abacus has modernized the learning for students by offering the
-                        convenience of Speed Building Software, Virtual Abacus, Online Competition Facility, Student’s
-                        Panel, Franchise Panel and Website Services which adds to a cheerful experience of students and
-                        facilitates easy operations for the franchise.
-                    </p>
-
-                    <p> ECONOMIC: Master Mind Abacus is affordable for all the students as it is cost-effective and
-                        gives value for money. Franchise Facts: Area Required: 500 to 1000 sq ft Investment: BDT:
-                        75,000/= - BDT: 200,000/= <br>
-
-                        Support Offered: ERP Systems: The franchisee benefits from the ERP system, through which we
-                        offer convenience, in managing a paperless office and saving the Manpower Cost. 24X7 Helpdesk:
-                        The helpdesk offers 24X7 help to the Franchisees for any issues, and ensures that it is resolved
-                        within 24 hrs. Post Franchise Operations Department: Our specialized Post Franchise Operations
-                        Department is responsible to grow our Franchisee from a seed to plant. Post-Franchise Department
-                        provides long-term support and constantly updates the franchises about the latest developments,
-                        facilitates the franchise to conduct demos and various activities to promote their business.
-                        <br>
-                        Individualized website: The Franchise gets a dynamic website with his own unique domain name.
-                        <br>
-                        <br>
-                        Franchisee kit: The kit contains Teachers Abacus, Marketing tools like counseling folder, flex,
-                        pamphlets, visiting cards, and other promotional material to promote business in the local area.
-                        <br>
-                        <br>
-                        Training Kit: The Kit contains all the materials for the teachers training.
-                        <br>
-                        <br>
-                        “A perfect franchise opportunity is waiting for you, contact now to become franchisee”
-                        <br>
-                        <br>
-                        Mastermind Abacus Bangladesh Head Office: House # 40, Road # 07, Sector # 13, Uttara,
-                        Dhaka-1230. Mobile: 01865-598364
-
-                        Thanks & Regards
-
-                        Master Mind Team
-                    </p>
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- features-4 block -->
 <section class="services-12" id="course">
     <div class="form-12-content">
         <div class="container">
