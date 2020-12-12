@@ -30,6 +30,10 @@ class Communication extends Admin_Controller
 
     public function mailbox($action = 'inbox')
     {
+        if ($this->session->userdata['loggedin_role_id'] == 7) {
+            access_denied();
+        }
+
         if ($action == 'compose') {
             $this->data['inside_subview'] = 'message_compose';
         } elseif ($action == 'inbox') {

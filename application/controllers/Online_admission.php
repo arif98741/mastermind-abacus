@@ -30,7 +30,11 @@ class Online_admission extends Admin_Controller
         }
 
         $branchID = $this->application_model->get_branch_id();
-        if (isset($_POST['search'])) {
+        if (isset($_POST['new_admission']) && $_POST['new_admission'] == 1) {
+
+            $this->data['students'] = $this->online_admission_model->getOnlineAdmissionNewPending();
+
+        } else if (isset($_POST['search'])) {
             $classID = $this->input->post('class_id');
             $sectionID = $this->input->post('section_id');
             $this->data['students'] = $this->online_admission_model->getOnlineAdmission($classID, $branchID);
