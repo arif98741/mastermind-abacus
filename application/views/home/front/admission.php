@@ -5,7 +5,7 @@
 <div class="breadcrumb">
     <div class="container px-md-0">
         <ul class="list-unstyled list-inline">
-            <li class="list-inline-item"><a href="<?php echo base_url('home') ?>">Home</a></li>
+            <li class="list-inline-item"><a href="<?php echo base_url() ?>">Home</a> | </li>
             <li class="list-inline-item active"><?php echo $page_data['page_title']; ?></li>
         </ul>
     </div>
@@ -14,16 +14,16 @@
 <!-- Main Container Starts -->
 <div class="container px-md-0 main-container">
     <h3 class="main-heading2 mt-0"><?php echo $page_data['title']; ?></h3>
-    <?php echo $page_data['description']; ?>
+    <?php //echo $page_data['description']; ?>
     <div class="box2 form-box">
         <?php
         if ($this->session->flashdata('success')) {
-            echo '<div class="alert alert-success"><i class="icon-text-ml fa fa-check-circle"></i>' . $this->session->flashdata('success') . '</div>';
+            echo '<div class="alert alert-success mt-3 mb-3"><i class="icon-text-ml fa fa-check-circle"></i>' . $this->session->flashdata('success') . '</div>';
         }
         ?>
         <?php
         if ($this->session->flashdata('error')) {
-            echo '<div class="alert alert-warning"><i class="icon-text-ml fa fa-check-circle"></i>' . $this->session->flashdata('error') . '</div>';
+            echo '<div class="alert alert-warning mt-3 mb-3"><i class="icon-text-ml fa fa-check-circle"></i>' . $this->session->flashdata('error') . '</div>';
         }
         ?>
         <?php if (isset($error)): ?>
@@ -118,6 +118,20 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <lable class="control-label">Name of School/Institution</lable>
+                            <input type="text" name="institute" value="<?= set_value('institute') ?>"
+                                   class="form-control" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <lable class="control-label">Grade/Class</lable>
+                            <input type="text" name="grad_class" value="<?= set_value('grad_class') ?>"
+                                   class="form-control" autocomplete="off">
+                        </div>
+                    </div>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label"><?= translate('address') ?> <span
@@ -169,27 +183,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label"><?= translate('occupation') ?> <span
                                         class="required">*</span></label>
                             <input type="text" class="form-control" name="grd_occupation"
                                    value="<?= set_value('grd_occupation') ?>" autocomplete="off"/>
                             <span class="error"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label"><?= translate('guardian') . " " . translate('email') ?></label>
-                            <input type="text" class="form-control" name="grd_email"
-                                   value="<?= set_value('grd_email') ?>" autocomplete="off">
-                        </div>
-                    </div>
-                    <div class="col-md-4" style="display: none">
-                        <div class="form-group">
-                            <label class="control-label"><?= translate('income') ?></label>
-                            <input class="form-control" name="grd_income" value="<?= set_value('grd_income') ?>"
-                                   type="text" autocomplete="off"/>
                         </div>
                     </div>
                     <div class="col-md-4" style="display: none">
@@ -199,9 +199,7 @@
                                    value="<?= set_value('grd_education') ?>" autocomplete="off"/>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
 
                     <div class="col-md-6">
                         <div class="form-group">
@@ -214,13 +212,11 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="message"><?= translate('guardian') . " " . translate('address') ?> <span
-                                class="required">*</span></label>
-                    <textarea class="form-control" id="grd_address" name="grd_address"
-                              placeholder="Enter Address"><?php echo set_value('grd_address'); ?></textarea>
-                    <span class="error"></span>
+                <div class="row">
+
+
                 </div>
+
                 <!--custom fields details-->
                 <div class="row" id="customFields">
                     <?php echo render_custom_Fields('online_admission', $branchID); ?>

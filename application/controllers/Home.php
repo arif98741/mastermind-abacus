@@ -105,21 +105,22 @@ class Home extends Frontend_Controller
 
             $this->form_validation->set_rules('class_id', translate('class'), 'trim');
             $this->form_validation->set_rules('section_id', translate('section'), 'trim');
-            $this->form_validation->set_rules('first_name', translate('first_name'), 'trim|required');
-            $this->form_validation->set_rules('last_name', translate('last_name'), 'trim|required');
+            $this->form_validation->set_rules('first_name', translate('first_name'), 'trim|required|min_length[3]|max_length[35]');
+            $this->form_validation->set_rules('last_name', translate('last_name'), 'trim|required|min_length[3]|max_length[35]');
             $this->form_validation->set_rules('gender', translate('gender'), 'trim|required');
             $this->form_validation->set_rules('birthday', translate('birthday'), 'trim|required');
-            $this->form_validation->set_rules('mobile_no', translate('mobile_no'), 'trim|required|numeric');
-            $this->form_validation->set_rules('address', translate('address'), 'trim|required');
+            $this->form_validation->set_rules('mobile_no', translate('mobile_no'), 'trim|required|numeric|min_length[11]|max_length[11]');
+            $this->form_validation->set_rules('institute', 'Institute', 'trim|required');
+            $this->form_validation->set_rules('grad_class', 'Grade or Class', 'trim|required');
+            $this->form_validation->set_rules('address', translate('address'), 'trim|required|min_length[3]|max_length[11]');
             $this->form_validation->set_rules('guardian_name', translate('guardian_name'), 'trim|required');
             $this->form_validation->set_rules('grd_occupation', translate('occupation'), 'trim|required');
-            $this->form_validation->set_rules('guardian_relation', translate('guardian_relation'), 'trim|required');
-            $this->form_validation->set_rules('grd_mobile_no', translate('guardian') . " " . translate('mobile_no'), 'trim|numeric');
+            $this->form_validation->set_rules('guardian_relation', translate('guardian_relation'), 'trim|required|max_length[25]');
+            $this->form_validation->set_rules('grd_mobile_no', translate('guardian') . " " . translate('mobile_no'), 'trim|numeric|min_length[11]|max_length[11]');
             $this->form_validation->set_rules('grd_address', translate('guardian') . " " . translate('address'), 'trim');
             if ($captcha == 'enable') {
                 $this->form_validation->set_rules('g-recaptcha-response', 'Captcha', 'trim|required');
             }
-
 
 
             // custom fields validation rules
@@ -141,6 +142,8 @@ class Home extends Frontend_Controller
                     'birthday' => date("Y-m-d", strtotime($this->input->post('birthday'))),
                     'mobile_no' => $this->input->post('mobile_no'),
                     'email' => $this->input->post('email'),
+                    'institute' => $this->input->post('institute'),
+                    'grad_class' => $this->input->post('grad_class'),
                     'address' => $this->input->post('address'),
                     'guardian_name' => $this->input->post('guardian_name'),
                     'guardian_relation' => $this->input->post('guardian_relation'),
@@ -159,7 +162,6 @@ class Home extends Frontend_Controller
                     'apply_date' => date("Y-m-d H:i:s"),
                 );
                 $status = $this->db->insert('online_admission', $arrayData);
-
                 $studentID = $this->db->insert_id();
 
                 // handle custom fields data
@@ -170,10 +172,10 @@ class Home extends Frontend_Controller
                 }
 
                 $this->load->library("bulksmsbd");
-                $trackingNo = '#'.str_pad($studentID,8,"0",STR_PAD_LEFT);
-                $message = "Your application to Mastermind Abacus Bangladesh Ltd is received. Tracking ID ".$trackingNo;
+                $trackingNo = '#' . str_pad($studentID, 8, "0", STR_PAD_LEFT);
+                $message = "Dear " . $arrayData['first_name'] . ", your application to Mastermind Abacus Bangladesh Ltd is received. Tracking ID " . $trackingNo;
                 $this->bulksmsbd->sendSms($arrayData['mobile_no'], $message);
-                $success = 'Your admission form is successfully submitted. Please check your sms and save tracking ID ('.$trackingNo.')';
+                $success = 'Your admission form is successfully submitted. Please check your sms and save tracking ID (' . $trackingNo . ')';
                 $this->session->set_flashdata('success', $success);
                 redirect('admission');
             } else {
@@ -275,7 +277,7 @@ class Home extends Frontend_Controller
         }
         $this->data['page_data'] = $this->home_model->get('front_cms_contact', array('branch_id' => $branchID), true);
         $this->data['main_contents'] = $this->load->view('home/contact', $this->data, true);
-        $this->load->view('home/front/lib/header',$this->data);
+        $this->load->view('home/front/lib/header', $this->data);
         $this->load->view('home/front/contact');
         $this->load->view('home/front/lib/footer');
     }
@@ -333,5 +335,15 @@ class Home extends Frontend_Controller
             $school = $this->uri->segment(3);
         }
         echo json_encode(array('url_alias' => base_url("home/index/" . $url['url_alias'])));
+    }
+
+    public function mobileadmissionRegex($userName): bool
+    {
+        if (preg_match('/^[0-9]+$/', $userName)) {
+            $this->form_validation->set_message('regex_check', 'The %s field is not valid!');
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 }
