@@ -79,7 +79,9 @@
                               Login
                               </button>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="<?php echo base_url(); ?>gurdian-login">Gurdian Login</a>
+                                  <a class="dropdown-item" href="<?php echo base_url(); ?>backend">Admin Login</a>
+                                  <a class="dropdown-item" href="<?php echo base_url(); ?>guardian-login">Gurdian Login</a>
+                                  <a class="dropdown-item" href="<?php echo base_url(); ?>teacher-login">Gurdian Login</a>
                               </div>
                           </div>
                     </li>

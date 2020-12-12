@@ -60,7 +60,8 @@ $route['program-overview'] = 'home/programOverview';
 
 
 $route['backend'] = 'authentication';
-$route['gurdian-login'] = 'authentication';
+$route['guardian-login'] = 'authentication';
+$route['teacher-login'] = 'authentication';
 $route['default_controller'] = 'home';
 $route['404_override'] = 'errors';
 $route['translate_uri_dashes'] = FALSE;
