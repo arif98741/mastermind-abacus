@@ -77,7 +77,8 @@
                         </button>
                     </div>
                     <div class="sign-footer">
-                        <p><?php echo $global_config['footer_text']; ?></p>
+                        <p ><a href="<?php echo base_url(); ?>">Back to Homepage</a></p>
+                        <p ><?php echo $global_config['footer_text']; ?></p>
                     </div>
                     <?php echo form_close(); ?>
                 </div>

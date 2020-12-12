@@ -227,10 +227,15 @@ a:hover, a:focus {
 }
 
 .sign-footer p {
-    color: #444;
+    color: #7b6f6f;
     text-align: center;
-    margin-top: 30px !important;
+    margin-top: 15px !important;
 }
+.sign-footer p a {
+    color: #fff;
+
+}
+
 
 .forgot-header {
     color: #545454;
