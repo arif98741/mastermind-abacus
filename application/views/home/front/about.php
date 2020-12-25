@@ -1,104 +1,363 @@
-<section class="w3l-index1" id="about">
-    <div class="calltoaction-20  py-5 editContent">
-        <div class="container py-md-3">
-            <div class="calltoaction-20-content row">
 
-                <div class="col-lg-12">
-                    <h2 class="text-center" id="about-course">ABOUT COURSE</h2>
-                    <h4 class="mt-4">What is Abacus ?</h4>
-                    <p class="">Abacus is an instrument that was invented some 2500 years ago primarily in China, which
-                        later on spread through countries like Korea, Japan, Taiwan, Malaysia etc. It was used in the
-                        ancient times for calculating numbers through basic arithmetic system. It has now been proven as
-                        a complete brain development tool over last two decades.
-                    </p>
-                    <p>Abacus became popular over the world after being transformed from a calculating instrument into a
-                        system having immense power to benefit children of small ages by expanding the brain usage, in
-                        addition to making maths learning easy and effective.
 
-                    </p>
-
-                    <img alt="" class="img-responsive img-fluid" src="<?php echo base_url(); ?>assets/front/images/what-is-abacus.jpg">
-                </div>
-
-                <div class="col-lg-12">
-                    <h4 class="mt-4">Getting Friendly with Abacus:</h4>
-                    <small>The image displayed is that of a structure of an abacus</small>
-                    <img alt="" class="img-responsive img-fluid" src="<?php echo base_url(); ?>assets/front/images/AboutAbacus.jpg" style="margin: 0 auto">
-                    <h4 class="mt-4">Functions of Abacus:</h4>
-                    <p class="">An abacus instrument allows performing basic operations like Addition, Subtraction,
-                        Multiplication and Division. It can also carry out operations such as counting up to decimal
-                        places, calculates sums having negative numbers etc.
-
-                    </p>
-                    <h4 class="mt-4">Advantages of Abacus: </h4>
-                    <small>Improvement of numerical memory :
-                    </small>
-                    <p class="">Children using Abacus are found to be superior in the accuracy of their memory and the
-                        number of digits they are able to memorize when compared with non-abacus learners of the same
-                        age. This is because the abacus children place numbers on the abacus image in their head as they
-                        mentally calculate with abacus method.
-
-                    </p>
-                    <small>Improvement of numerical memory :
-                    </small>
-                    <p><strong>It improves the image memory. It becomes easier for the children to do mental maths
-                            quickly with accuracy.
-
-                        </strong></p>
-                    <p>It helps the student in solving mathematical problems. The accurate and rapid calculation leads
-                        to better marks in mathematical calculations. In addition, a positive effect is seen as the
-                        children are quick in calculating fractional numbers too.</p>
-
-                    <p>The advantage of Abacus learning is that the learners can calculate simple mathematical problems
-                        rapidly and accurately. They acquire the ability of doing mental maths utilizing the abacus
-                        image, which allows quick calculations without actually using the ABACUS.</p>
-
-                    <p> At the end of this programme, child can do Addition, Substraction, Multiplication and Division
-                        large numbers with greater speed than the calculator and computer, because ABACUS is the father
-                        of modern computer.
-                    </p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Listening</li>
-                                <li>Concentration</li>
-                                <li>Comprehension</li>
-                                <li>Presentation</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Memory, Speed, Accuracy</li>
-                                <li>Creative and Imagining Skills</li>
-                                <li>Personality Development</li>
-                                <li>High Confidence level</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="services-12" id="course">
-    <div class="form-12-content">
+<!-- Page Header Start here -->
+<section class="page-header section-notch">
+    <div class="overlay">
         <div class="container">
-            <div class="grid grid-column-2 ">
+            <h3>About Our School</h3>
+            <ul>
+                <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                <li>-</li>
+                <li>About us</li>
+            </ul>
+        </div><!-- container -->
+    </div><!-- overlay -->
+</section><!-- page header -->
+<!-- Page Header End here -->
 
-                <div class="column1">
-                    <div class="heading">
-                        <h3 class="head text-white">Are you interested ?</h3>
-                        <h4>Admission is now open now open</h4>
-                        <p class="my-3 text-white"> To be a part of <i>Mastermind Abacus Bangladesh</i> Admit now</p>
-                    </div>
-                </div>
-                <div class="column2">
-                    <a class="btn btn-secondary btn-theme2 mt-3" href="<?php echo base_url(); ?>admission"> Apply Here</a>
+
+<!-- facility Start here -->
+<section class="facility padding-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-symbols"></span>
+                    <h4>Active Learning</h4>
+                    <p>All are classrooms are colorful and creative, with stimulating equipment and materials.</p>
+                </div><!-- facility item -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-avatar"></span>
+                    <h4>Expert Teachers</h4>
+                    <p>Our teachers are well qualified and equipped with regular training, workshops..</p>
+                </div><!-- facility item -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-world"></span>
+                    <h4>Play-way methods</h4>
+                    <p>We focus on developing a child holistically using play-way methods and do not enforce learning through books only.</p>
+                </div><!-- facility item -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-line-chart"></span>
+                    <h4>Safety & Security</h4>
+                    <p>We strongly believe in the importance of security and safety for all of the children, parents and staff at PSM....</p>
+                </div><!-- facility item -->
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- facility -->
+<!-- facility End here -->
+
+
+<!-- About Start here -->
+<?php
+include 'partials/about-block.php';
+?>
+<!-- About End here -->
+
+
+<!-- Features Start here -->
+<section class="features padding-120">
+    <div class="container">
+        <div class="section-header">
+            <h3>Why Play School Mastermind</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="features-left">
+                    <div class="feature-item">
+                        <div class="icon flaticon-people-1"></div>
+                        <div class="content">
+                            <h4>Expert Teachers</h4>
+                            <p>Our teachers are well qualified and equipped with regular training, workshops and assessments which make them efficient in handling grim situations and spruce up to provide required acumen and resources.</p>
+                        </div>
+                    </div><!-- feature item -->
+                    <div class="feature-item">
+                        <div class="icon flaticon-symbols"></div>
+                        <div class="content">
+                            <h4>Active Learning</h4>
+                            <p>All are classrooms are colorful and creative, with stimulating equipment and materials.</p>
+                        </div>
+                    </div><!-- feature item -->
+                    <div class="feature-item">
+                        <div class="icon flaticon-microphone"></div>
+                        <div class="content">
+                            <h4>Teaching Aids</h4>
+                            <p>Our specialized teaching aids help in imparting the lessons with efficiency and effectiveness for better retention.</p>
+                        </div>
+                    </div><!-- feature item -->
+                </div><!-- feature left -->
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="feature-image">
+                    <img src="<?php echo base_url(); ?>assets/front/images/feature.jpg" alt="feature image" class="img-responsive">
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="features-right">
+                    <div class="feature-item">
+                        <div class="icon flaticon-home"></div>
+                        <div class="content">
+                            <h4>Health & Hygiene</h4>
+                            <p>Play School Mastermind follows strict hygiene standards. Our schools maintain high level of cleanliness. Every center follows standard protocols to ensure the cleanliness of the place and objects.</p>
+                        </div>
+                    </div><!-- feature item -->
+                    <div class="feature-item">
+                        <div class="icon flaticon-line-chart"></div>
+                        <div class="content">
+                            <h4>Safety & Security</h4>
+                            <p>We strongly believe in the importance of security and safety for all of the children, parents and staff at PSM....</p>
+                        </div>
+                    </div><!-- feature item -->
+                    <div class="feature-item">
+                        <div class="icon flaticon-signs"></div>
+                        <div class="content">
+                            <h4>Play-way methods</h4>
+                            <p>We focus on developing a child holistically using play-way methods and do not enforce learning through books only.</p>
+                        </div>
+                    </div><!-- feature item -->
+                </div><!-- feature left -->
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- features -->
+<!-- Features End here -->
+
+
+<!-- Teachers Start here -->
+<!-- <section class="teachers section-notch"> -->
+<!-- <div class="overlay padding-120"> -->
+<!-- <div class="container"> -->
+<!-- <div class="section-header bg"> -->
+<!-- <h3>Meet Our Teachers</h3> -->
+<!-- <p>Rapidiously expedite granular imperatives before economically sound web services. Credibly actualize pandemic strategic themeplatform.</p> -->
+<!-- </div> -->
+<!-- <div class="row"> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_01.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Broklyn Doel <span>Sains Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details.html">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_02.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Alex Jhonson <span>Art Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details.html">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_03.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Robot Jhonson <span>Math Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details.html">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_04.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Janaton Doe <span>English Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details.html">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- </div><!-- row -->
+<!-- </div><!-- container -->
+<!-- </div><!-- overlay -->
+<!-- </section><!-- teacher -->
+<!-- <!-- Teachers End here -->
+
+
+<!-- <!-- Testimonial Start here -->
+<!-- <section class="testimonial padding-120"> -->
+<!-- <div class="container"> -->
+<!-- <div class="section-header"> -->
+<!-- <h3>What Parents Say</h3> -->
+<!-- <p>Rapidiously expedite granular imperatives before economically sound web services. Credibly actualize pandemic strategic themeplatform.</p> -->
+<!-- </div> -->
+<!-- <div class="testimonial-items"> -->
+<!-- <div class="testimonial-slider swiper-container" dir="rtl"> -->
+<!-- <div class="swiper-wrapper"> -->
+<!-- <div class="testimonial-item swiper-slide"> -->
+<!-- <div class="testimonial-details"> -->
+<!-- <p>Professionally predominate that timely infrastriuctures tops line methodlogies Colaboratively seize scalable achannels before longterm high impact</p> -->
+<!-- <h4>Joly Smith <span>ui/ux Designer</span></h4> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_icon_01.jpg" alt="testimonial icon" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="testimonial-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_01.jpg" alt="client image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- </div><!-- testimonial-item -->
+<!-- <div class="testimonial-item swiper-slide"> -->
+<!-- <div class="testimonial-details"> -->
+<!-- <p>Professionally predominate that timely infrastriuctures tops line methodlogies Colaboratively seize scalable achannels before longterm high impact</p> -->
+<!-- <h4>Joly Smith <span>ui/ux Designer</span></h4> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_icon_02.jpg" alt="testimonial icon" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="testimonial-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_02.jpg" alt="client image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- </div><!-- testimonial-item -->
+<!-- <div class="testimonial-item swiper-slide"> -->
+<!-- <div class="testimonial-details"> -->
+<!-- <p>Professionally predominate that timely infrastriuctures tops line methodlogies Colaboratively seize scalable achannels before longterm high impact</p> -->
+<!-- <h4>Joly Smith <span>ui/ux Designer</span></h4> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_icon_03.jpg" alt="testimonial icon" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="testimonial-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_03.jpg" alt="client image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- </div><!-- testimonial-item -->
+<!-- <div class="testimonial-item swiper-slide"> -->
+<!-- <div class="testimonial-details"> -->
+<!-- <p>Professionally predominate that timely infrastriuctures tops line methodlogies Colaboratively seize scalable achannels before longterm high impact</p> -->
+<!-- <h4>Joly Smith <span>ui/ux Designer</span></h4> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_icon_01.jpg" alt="testimonial icon" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="testimonial-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_01.jpg" alt="client image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- </div><!-- testimonial-item -->
+<!-- <div class="testimonial-item swiper-slide"> -->
+<!-- <div class="testimonial-details"> -->
+<!-- <p>Professionally predominate that timely infrastriuctures tops line methodlogies Colaboratively seize scalable achannels before longterm high impact</p> -->
+<!-- <h4>Joly Smith <span>ui/ux Designer</span></h4> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_icon_02.jpg" alt="testimonial icon" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="testimonial-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_02.jpg" alt="client image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- </div><!-- testimonial-item -->
+<!-- <div class="testimonial-item swiper-slide"> -->
+<!-- <div class="testimonial-details"> -->
+<!-- <p>Professionally predominate that timely infrastriuctures tops line methodlogies Colaboratively seize scalable achannels before longterm high impact</p> -->
+<!-- <h4>Joly Smith <span>ui/ux Designer</span></h4> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_icon_03.jpg" alt="testimonial icon" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="testimonial-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/testimonial/testimonial_03.jpg" alt="client image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- </div><!-- testimonial-item -->
+
+<!-- </div><!-- swiper-wrapper -->
+<!-- </div><!-- swiper-container -->
+<!-- </div><!-- testimonial-items -->
+<!-- </div><!-- container -->
+<!-- </section><!-- testimonial -->
+<!-- <!-- Testimonial End here -->
+
+
+<!-- Subscribe Start here -->
+<?php
+include 'partials/admission-block.php';
+?>
+<!-- Subscribe End here -->
+
+
+<!-- Partner Start here -->
+<section class="partner section-notch">
+    <div class="overlay padding-120" style="margin-top:100px;">
+        <div class="container">
+            <div class="section-header bg">
+                <h3>OUR PARTNERS IN PROGRESS</h3>
+            </div>
+            <div class="partner-items">
+                <div class="partner-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_01.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_02.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_03.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_04.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_05.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_06.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_01.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_02.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_03.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_04.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_05.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_06.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+
+                    </div><!-- swiper-wrapper -->
+                </div><!-- swiper-container -->
+            </div><!-- partner-items -->
+        </div><!-- container -->
+    </div><!-- overlay -->
+</section><!-- partner -->
+<!-- Partner End here -->

@@ -1,122 +1,89 @@
-<section class="w3l-contact-breadcrum">
-    <div class="breadcrum-bg py-sm-5 py-4">
-        <div class="container py-lg-3">
-            <h2>Contact Us</h2>
-            <p><a href="index.html">Home</a> &nbsp; / &nbsp; Contact</p>
-        </div>
-    </div>
-</section>
-<section class="w3l-contacts-12" id="contact">
-    <div class="contact-top pt-5">
-        <div class="container py-md-3">
-            <?php if ($this->session->flashdata('msg_success')): ?>
-                <div class="alert alert-success">
-                    <i class="icon-text-ml far fa-check-circle"></i> <?php echo $this->session->flashdata('msg_success'); ?>
+
+<!-- Page Header Start here -->
+<section class="page-header section-notch">
+    <div class="overlay">
+        <div class="container">
+            <h3>Our Contact Info</h3>
+            <ul>
+                <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                <li>-</li>
+                <li>Contact us</li>
+            </ul>
+        </div><!-- container -->
+    </div><!-- overlay -->
+</section><!-- page header -->
+<!-- Page Header End here -->
+
+
+<!-- Contact Start here -->
+<section class="contact contact-page">
+    <div class="contact-details padding-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul>
+                        <li class="contact-item">
+                            <span class="icon flaticon-signs"></span>
+                            <div class="content">
+                                <h4>Our Campus</h4>
+                                <p>House# 40, Road# 07, Sector# 13, <br> Uttara, Dhaka-1230</p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon flaticon-smartphone"></span>
+                            <div class="content">
+                                <h4>Phone Number</h4>
+                                <p>+880 1401-123603, 01401-123606 <br> 01401-123607</p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon flaticon-message"></span>
+                            <div class="content">
+                                <h4>Email Address</h4>
+                                <p>info@playschoolmastermind.com <br> playschoolmastermind@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            <?php endif; ?>
-            <?php if ($this->session->flashdata('msg_error')): ?>
-                <div class="alert alert-danger">
-                    <?php echo $this->session->flashdata('msg_error'); ?>
-                </div>
-            <?php endif; ?>
-            <div class="row cont-main-top">
-
-                <!-- contact address -->
-                <div class="contact col-lg-4">
-                    <div class="cont-subs">
-                        <div class="cont-add">
-
-                            <div class="cont-add-rgt">
-                                <h4>Address:</h4>
-                                <p class="contact-text-sub">House # 40, Road # 07, Sector # 13, Uttara</p>
-                            </div>
-                            <div class="cont-add-lft">
-                                <span aria-hidden="true" class="fa fa-map-marker"></span>
-                            </div>
-                        </div>
-                        <div class="cont-add add-2">
-
-                            <div class="cont-add-rgt">
-                                <h4>Email:</h4>
-                                <a href="mailto:info@mastermindabacusbd.com">
-                                    <p class="contact-text-sub">info@mastermindabacusbd.com</p>
-                                </a>
-                            </div>
-                            <div class="cont-add-lft">
-                                <span aria-hidden="true" class="fa fa-envelope"></span>
-                            </div>
-                        </div>
-                        <div class="cont-add">
-
-                            <div class="cont-add-rgt">
-                                <h4>Phone:</h4>
-                                <a href="tel:+880-1865-598364">
-                                    <p class="contact-text-sub">+880-1865-598364</p>
-                                </a>
-                            </div>
-                            <div class="cont-add-lft">
-                                <span aria-hidden="true" class="fa fa-phone"></span>
-                            </div>
-                        </div>
-                        <div class="cont-add add-3">
-
-                            <div class="cont-add-rgt">
-                                <h4>Find Us On</h4>
-                                <div class="main-social-1 mt-2">
-                                    <a class="facebook" href="#facebook"><span class="fa fa-facebook"></span></a>
-                                    <a class="twitter" href="#twitter"><span class="fa fa-twitter"></span></a>
-                                    <a class="instagram" href="#instagram"><span class="fa fa-instagram"></span></a>
-                                    <a class="google-plus" href="#google-plus"><span
-                                                class="fa fa-google-plus"></span></a>
-                                    <a class="linkedin" href="#linkedin"><span class="fa fa-linkedin"></span></a>
-                                </div>
-                            </div>
-                            <div class="cont-add-lft">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //contact address -->
-                <!-- contact form -->
-                <div class="contacts12-main col-lg-8 mt-lg-0 mt-5">
-                    <?php echo form_open($this->uri->uri_string(), array('class' => 'main-input')); ?>
-
-                    <div class="top-inputs d-grid">
-                        <input name="name" id="name" value="<?php echo set_value('name'); ?>" placeholder="Name"
-                               required="" type="text">
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Email"
-                               value="<?php echo set_value('email'); ?>">
-                    </div>
-                    <input type="text" class="form-control" name="phoneno" p id="phoneno"
-                           value="<?php echo set_value('phoneno'); ?>" placeholder="Phone Number">
-                    <br>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                           value="<?php echo set_value('subject'); ?>">
-                    <textarea id="w3lMessage" name="message"  placeholder="Message" required=""><?php echo set_value('message'); ?></textarea>
-                    <?php if ($cms_setting['captcha_status'] == 'enable'): ?>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <?php echo $recaptcha['widget']; echo $recaptcha['script']; ?>
-                                <span class="text-danger"><?php echo form_error('g-recaptcha-response'); ?></span>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <div class="text-right">
-                        <button class="btn btn-theme2" type="submit">Submit Now</button>
-                    </div>
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <form class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" class="contact-input">
+                        <input type="email" name="email" placeholder="Your Email" class="contact-input">
+                        <textarea rows="5" class="contact-input">Your Messages</textarea>
+                        <input type="submit" name="submit" value="Send Message" class="contact-button">
                     </form>
                 </div>
-                <!-- //contact form -->
-            </div>
-        </div>
-        <!-- map -->
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14594.119465413867!2d90.3879868!3d23.8708226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xac45ad92561cfc45!2sMastermind%20Abacus!5e0!3m2!1sen!2sbd!4v1606757617340!5m2!1sen!2sbd"
-                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-        </div>
-        <!-- //map -->
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- contact-details -->
+    <div class="contact-map">
+        <div class="map-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d116765.69629396025!2d90.38631!3d23.85669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xedd54c5e901823f3!2sPlay+School+mastermind!5e0!3m2!1sen!2sus!4v1559497455776!5m2!1sen!2sus" width="1000" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div><!-- row -->
+            </div><!-- container -->
+        </div><!-- map-details -->
     </div>
 </section>
-</section>
+<!-- Contact End here -->
+
+
+<!-- Subscribe Start here -->
+<section class="subscribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <h3>Admission Open for 2020-2021 Session</h3>
+            </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSch633i7pd1sVXqsjo_obrwoF5Sh_yzLJQNIod6pDUy97KlWA/viewform" target="-blank">
+                    <input type="submit"  value="Admission Now">
+                </form>
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- subscribe -->
+<!-- Subscribe End here -->

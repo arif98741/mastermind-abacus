@@ -1,362 +1,345 @@
 
-
-<!--introduciton seciton-->
-<section class="w3l-index1 mb-5">
-    <div class="calltoaction-20editContent">
-        <div class="container py-md-3">
-
-            <div class="calltoaction-20-content row">
-                <div class="column center-align-self col-lg-12 pr-lg-5">
-                    <h1 class="mb-4 text-center">WELCOME TO SMART EDUCATION GROUP
-                    </h1>
-                    <strong>Smart Education Group</strong> is an institute established in 2014 focusing to introduce and
-                    implement an
-                    innovative and exciting perspective to enhance the learning experience of students in Bangladesh.
-                    The primary goal is to introduce and implement the concept of STEAM (Science, Technology,
-                    Engineering, Art and Math) curriculum for young learners. Smart Education Group is affiliated with
-                    an international learning organization "Master Mind Abacus" which is among one of the fastest and
-                    leading developing academy. Mastermind Abacus classes offer a specialized course, that is proven as
-                    a "Brain Development Program" for children. It is a boon for kids as it enables them not only to
-                    learn to do mental maths but also to utilize all functions of both left and right brain. We at
-                    Master Mind work in accordance with child's psychology. We understand the importance of 'play' in a
-                    child's life and implement playful methods in our lessons, so as to make their experience joyful and
-                    memorable translating into effective learning.
-
-                </div>
-
+<!-- facility Start here -->
+<section class="facility padding-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-symbols"></span>
+                    <h4>Active Learning</h4>
+                    <p>All are classrooms are colorful and creative, with stimulating equipment and materials.</p>
+                </div><!-- facility item -->
             </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-avatar"></span>
+                    <h4>Expert Teachers</h4>
+                    <p>Our teachers are well qualified and equipped with regular training, workshops..</p>
+                </div><!-- facility item -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-world"></span>
+                    <h4>Play-way methods</h4>
+                    <p>We focus on developing a child holistically using play-way methods and do not enforce learning through books only.</p>
+                </div><!-- facility item -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="facility-item">
+                    <span class="icon flaticon-line-chart"></span>
+                    <h4>Safety & Security</h4>
+                    <p>We strongly believe in the importance of security and safety for all of the children, parents and staff at PSM....</p>
+                </div><!-- facility item -->
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- facility -->
+<!-- facility End here -->
+
+
+<!-- About Start here -->
+<?php
+include 'partials/about-block.php';
+?>
+<!-- About End here -->
+
+
+<!-- Classes Start here -->
+<section class="classes padding-120">
+    <div class="container">
+        <div class="section-header">
+            <h3>Our Programs</h3>
         </div>
-    </div>
-</section>
-<!--  form-12 -->
-<section class="w3l-form-12">
-    <div class="form-12-content" id="services">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="class-item">
+                    <div class="image">
+                        <img src="<?php echo base_url(); ?>assets/front/images/classes/class_01.jpg" alt="class image" class="img-responsive">
+                    </div>
+                    <ul class="schedule">
+                        <li>
+                            <span>Class Size</span>
+                            <span>09 - 10</span>
+                        </li>
+                        <li>
+                            <span>Years Old</span>
+                            <span>2.5 - 3.5</span>
+                        </li>
+                        <li>
+                            <span>Time</span>
+                            <span>2 Hours</span>
+                        </li>
+                    </ul>
+                    <div class="content">
+                        <h4><a href="<?php echo base_url(); ?>programs">Play Group</a></h4>
+                        <p><span>Class Time (1st Shift)</span> : 08:30 am - 10:30 am</p>
+                        <p><span>Class Time (2nd Shift)</span> : 11:00 am - 01:00 pm</p>
+                    </div>
+                    <div class="address">
+                        <p><span><i class="fa fa-home" aria-hidden="true"></i></span> H# 40, R# 07, S# 13, Uttara, Dhaka-1230</p>
+                    </div>
+                </div><!-- class item -->
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="class-item">
+                    <div class="image">
+                        <img src="<?php echo base_url(); ?>assets/front/images/classes/class_02.jpg" alt="class image" class="img-responsive">
+                    </div>
+                    <ul class="schedule">
+                        <li>
+                            <span>Class Size</span>
+                            <span>09 - 10</span>
+                        </li>
+                        <li>
+                            <span>Years Old</span>
+                            <span>3.5 - 4.5</span>
+                        </li>
+                        <li>
+                            <span>Time</span>
+                            <span>2.5 Hours</span>
+                        </li>
+                    </ul>
+                    <div class="content">
+                        <h4><a href="<?php echo base_url(); ?>programs">Nursery</a></h4>
+                        <p><span>Class Time (1st Shift)</span> : 08:15 am - 10:45 am</p>
+                        <p><span>Class Time (2nd Shift)</span> : 11:00 am - 01:30 pm</p>
+                    </div>
+                    <div class="address">
+                        <p><span><i class="fa fa-home" aria-hidden="true"></i></span> H# 40, R# 07, S# 13, Uttara, Dhaka-1230</p>
+                    </div>
+                </div><!-- class item -->
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="class-item">
+                    <div class="image">
+                        <img src="<?php echo base_url(); ?>assets/front/images/classes/class_04.jpg" alt="class image" class="img-responsive">
+                    </div>
+                    <ul class="schedule">
+                        <li>
+                            <span>Class Size</span>
+                            <span>09 - 10</span>
+                        </li>
+                        <li>
+                            <span>Years Old</span>
+                            <span>4.5 - 5.5</span>
+                        </li>
+                        <li>
+                            <span>Time</span>
+                            <span>3 hours</span>
+                        </li>
+                    </ul>
+                    <div class="junior content">
+                        <h4><a href="<?php echo base_url(); ?>programs">Kindergarten</a></h4>
+                        <p><span>Class Time (1st Shift)</span> : 09:00 am - 12:00 pm</p>
+                    </div>
+                    <div class="address">
+                        <p><span><i class="fa fa-home" aria-hidden="true"></i></span>  H# 40, R# 07, S# 13, Uttara, Dhaka-1230</p>
+                    </div>
+                </div><!-- class item -->
+            </div>
+        </div><!-- row -->
+        <div class="class-button">
+            <a href="<?php echo base_url(); ?>programs" class="button-default">See More Programs</a>
+        </div>
+    </div><!-- container -->
+</section><!-- classes -->
+<!-- Classes End here -->
+
+
+<!-- Teachers Start here -->
+<!-- <section class="teachers section-notch"> -->
+<!-- <div class="overlay padding-120"> -->
+<!-- <div class="container"> -->
+<!-- <div class="section-header bg"> -->
+<!-- <h3>Meet Our Teachers</h3> -->
+<!-- <p>Rapidiously expedite granular imperatives before economically sound web services. Credibly actualize pandemic strategic themeplatform.</p> -->
+<!-- </div> -->
+<!-- <div class="row"> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_01.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Broklyn Doel <span>Sains Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_02.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Alex Jhonson <span>Art Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_03.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Robot Jhonson <span>Math Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+<!-- <div class="teacher-item"> -->
+<!-- <div class="teacher-image"> -->
+<!-- <img src="<?php echo base_url(); ?>assets/front/images/teachers/teacher_04.jpg" alt="teacher image" class="img-responsive"> -->
+<!-- </div> -->
+<!-- <div class="teacher-content"> -->
+<!-- <h4>Janaton Doe <span>English Teacher</span></h4> -->
+<!-- <ul> -->
+<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+<!-- <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
+<!-- </ul> -->
+<!-- <p>Distinctively initiate and sustainable synergy vaan tactical opportunities. awesome theme ollaboratively.</p> -->
+<!-- <a href="teacher-details">View Portfolio</a> -->
+<!-- </div> -->
+<!-- </div><!-- teacher item -->
+<!-- </div> -->
+<!-- </div><!-- row -->
+<!-- </div><!-- container -->
+<!-- </div><!-- overlay -->
+<!-- </section><!-- teacher -->
+<!-- Teachers End here -->
+
+<?php
+include 'partials/gallery-block.php';
+?>
+
+
+<!-- Achievements Start here -->
+<section class="achievements section-notch">
+    <div class="overlay padding-120">
         <div class="container">
-            <div class="grid grid-column-3 py-md-5">
-
-                <div class="column2">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <a href="services.html">
-                                <div class="courses-item text-white">
-                                    <span class="fa fa-cog"></span>
-                                    <h5>Logical Understanding</h5>
-                                    <p class="text-left">While a child visualize the questions on the imaginary abacus
-                                        after listening
-                                        to it, they have to apply logic to do the proper movement of beads in the mind.
-                                        This ability also helps the kids to apply logics in various situations and even
-                                        in real-life scenarios.
-
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <a href="services.html">
-                                <div class="courses-item text-white">
-                                    <span class="fa fa-flask"></span>
-                                    <h5>Concentration</h5>
-                                    <p class="text-left">For every question to be answered correctly, children have to
-                                        listen to the sum that is being read and concentrate on it so as to visualize it
-                                        in their mind. This becomes a habit when exercised regularly throughout the
-                                        abacus training for a period of 2 and half years. It applies to all subjects by
-                                        imbibing better listening skills.
-
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <a href="services.html">
-                                <div class="courses-item text-white">
-                                    <span class="fa fa-sun-o"></span>
-                                    <h5>Builds a Photographic Memory</h5>
-                                    <p class="text-left">When the beads movement is done in the mind, children pictures
-                                        the position of the beads displayed in their mind. Unless the picture is created
-                                        they would not be able to answer the question that was asked. Photographic
-                                        memory enables a student capture the images or instances as it is in their
-                                        memory.
-
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6">
-                            <a href="services.html">
-                                <div class="courses-item text-white">
-                                    <span class="fa fa-arrows-v"></span>
-                                    <h5>Enhances Visualization</h5>
-                                    <p class="text-left">When the beads movement is done in the mind, children pictures
-                                        the position of the beads displayed in their mind. Unless the picture is created
-                                        they would not be able to answer the question that was asked. Photographic
-                                        memory enables a student capture the images or instances as it is in their
-                                        memory.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="achievement-item">
+                        <i class="icon flaticon-student"></i>
+                        <span class="counter">100</span><span>+</span>
+                        <p>Total Students</p>
+                    </div><!-- achievement item -->
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<!-- // form-12 -->
-<!--counter section start-->
-<!-- specifications -->
-<section class="w3l-index2" style="background-image: url(<?php echo base_url();  ?>assets/front/images/counter-banner.png)">
-    <div class="main-w3 py-5" id="stats">
-        <div class="container py-lg-3">
-            <div class="row main-cont-wthree-fea">
-                <div class="col-lg-3 col-sm-6">
-                    <h3 class="title-spe">15</h3>
-                    <sub>COUNTRIES</sub>
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="achievement-item">
+                        <i class="icon flaticon-construction"></i>
+                        <span class="counter">10</span>
+                        <p>Class Rooms</p>
+                    </div><!-- achievement item -->
                 </div>
-                <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
-                    <h3 class="title-spe">3000</h3>
-                    <sub> CENTERS</sub>
+                <!-- <div class="col-md-3 col-sm-3 col-12"> -->
+                <!-- <div class="achievement-item"> -->
+                <!-- <i class="icon flaticon-school-bus"></i> -->
+                <!-- <span class="counter">24</span> -->
+                <!-- <p>Schools bus</p> -->
+                <!-- </div><!-- achievement item -->
+                <!-- </div> -->
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="achievement-item">
+                        <i class="icon flaticon-people"></i>
+                        <span class="counter">10</span>
+                        <p>Total Teachers</p>
+                    </div><!-- achievement item -->
                 </div>
-                <div class="col-lg-3 col-sm-6  mt-lg-0 mt-4">
-                    <h3 class="title-spe">10000</h3>
-                    <sub>INSTRUCTORS</sub>
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
-                    <h3 class="title-spe">500000</h3>
-                    <sub>STUDENTS</sub>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- //specifications -->
-</section>
-<!--counter section end-->
-
-<!-- features-4 block -->
-<section class="w3l-index1" id="about">
-    <div class="calltoaction-20  py-5 editContent">
-        <div class="container py-md-3">
-            <div class="calltoaction-20-content row">
-
-                <div class="col-lg-12">
-                    <h2 class="text-center" id="about-course">ABOUT COURSE</h2>
-                    <h4 class="mt-4">What is Abacus ?</h4>
-                    <p class="">Abacus is an instrument that was invented some 2500 years ago primarily in China, which
-                        later on spread through countries like Korea, Japan, Taiwan, Malaysia etc. It was used in the
-                        ancient times for calculating numbers through basic arithmetic system. It has now been proven as
-                        a complete brain development tool over last two decades.
-                    </p>
-                    <p>Abacus became popular over the world after being transformed from a calculating instrument into a
-                        system having immense power to benefit children of small ages by expanding the brain usage, in
-                        addition to making maths learning easy and effective.
-
-                    </p>
-
-                    <img alt="" class="img-responsive img-fluid" src="<?php echo base_url();  ?>assets/front/images/what-is-abacus.jpg">
-                </div>
-
-                <div class="col-lg-12">
-                    <h4 class="mt-4">Getting Friendly with Abacus:</h4>
-                    <small>The image displayed is that of a structure of an abacus</small>
-                    <img alt="" class="img-responsive img-fluid" src="<?php echo base_url();  ?>assets/front/images/AboutAbacus.jpg"
-                         style="margin: 0 auto">
-                    <h4 class="mt-4">Functions of Abacus:</h4>
-                    <p class="">An abacus instrument allows performing basic operations like Addition, Subtraction,
-                        Multiplication and Division. It can also carry out operations such as counting up to decimal
-                        places, calculates sums having negative numbers etc.
-
-                    </p>
-                    <h4 class="mt-4">Advantages of Abacus: </h4>
-                    <small>Improvement of numerical memory :
-                    </small>
-                    <p class="">Children using Abacus are found to be superior in the accuracy of their memory and the
-                        number of digits they are able to memorize when compared with non-abacus learners of the same
-                        age. This is because the abacus children place numbers on the abacus image in their head as they
-                        mentally calculate with abacus method.
-
-                    </p>
-                    <small>Improvement of numerical memory :
-                    </small>
-                    <p><strong>It improves the image memory. It becomes easier for the children to do mental maths
-                            quickly with accuracy.
-
-                        </strong></p>
-                    <p>It helps the student in solving mathematical problems. The accurate and rapid calculation leads
-                        to better marks in mathematical calculations. In addition, a positive effect is seen as the
-                        children are quick in calculating fractional numbers too.</p>
-
-                    <p>The advantage of Abacus learning is that the learners can calculate simple mathematical problems
-                        rapidly and accurately. They acquire the ability of doing mental maths utilizing the abacus
-                        image, which allows quick calculations without actually using the ABACUS.</p>
-
-                    <p> At the end of this programme, child can do Addition, Substraction, Multiplication and Division
-                        large numbers with greater speed than the calculator and computer, because ABACUS is the father
-                        of modern computer.
-                    </p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Listening</li>
-                                <li>Concentration</li>
-                                <li>Comprehension</li>
-                                <li>Presentation</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Memory, Speed, Accuracy</li>
-                                <li>Creative and Imagining Skills</li>
-                                <li>Personality Development</li>
-                                <li>High Confidence level</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- features-4 block -->
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- overlay -->
+</section><!-- achievements -->
+<!-- Achievements End here -->
 
 
-<section class="services-12" id="course">
-    <div class="form-12-content">
+
+<!-- Partner Start here -->
+<section class="partner section-notch">
+    <div class="overlay padding-120" style="margin-top:100px;">
         <div class="container">
-            <div class="grid grid-column-2 ">
-
-                <div class="column1">
-                    <div class="heading">
-                        <h3 class="head text-white">Are you interested ?</h3>
-                        <h4>Admission is now open now open</h4>
-                        <p class="my-3 text-white"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                            posuere cubilia Curae;
-                            Nulla mollis dapibus nunc, ut rhoncus
-                            turpis sodales quis. Integer sit amet mattis quam.</p>
-                    </div>
-                </div>
-                <div class="column2">
-                    <a class="btn btn-secondary btn-theme2 mt-3" href="<?php echo base_url(); ?>admission"> Apply Here</a>
-                </div>
+            <div class="section-header bg">
+                <h3>OUR PARTNERS IN PROGRESS</h3>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="partner-items">
+                <div class="partner-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_01.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_02.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_03.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_04.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_05.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_06.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_01.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_02.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_03.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_04.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_05.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
+                        <div class="partner-item swiper-slide">
+                            <img src="<?php echo base_url(); ?>assets/front/images/partner/partner_06.jpg" alt="partner image" class="img-responsive">
+                        </div><!-- partner-item -->
 
-<section class="w3l-price-2" id="news">
-    <div class="price-main py-5">
-        <div class="container py-md-3">
-            <div class="pricing-style-w3ls row py-md-5">
-                <div class="pricing-chart col-lg-6">
-                    <h3 class="">News Events</h3>
-                    <div class="tatest-top mt-md-5 mt-4">
-                        <div class="price-box btn-layout bt6">
-                            <div class="grid grid-column-2">
-                                <div class="column-6">
-                                    <img alt="" class="img-fluid" src="<?php echo base_url();  ?>assets/front/images/g9.jpg">
-                                </div>
-                                <div class="column1">
-
-                                    <div class="job-info">
-                                        <h6 class="pricehead"><a href="#">Summer Course Starts </a></h6>
-                                        <h5>April 25, 2020</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit architecto..</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="price-box btn-layout bt6 top-middle-1">
-                            <div class="grid grid-column-2">
-                                <div class="column-6">
-                                    <img alt="" class="img-fluid" src="<?php echo base_url();  ?>assets/front/images/g10.jpg">
-                                </div>
-                                <div class="column1">
-                                    <div class="job-info">
-                                        <h6 class="pricehead"><a href="#">
-                                                About Artificial Intelligence</a></h6>
-                                        <h5>March 25, 2020</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit architecto..</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="price-box btn-layout bt6">
-                            <div class="grid grid-column-2">
-                                <div class="column-6">
-                                    <img alt="" class="img-fluid" src="<?php echo base_url();  ?>assets/front/images/g8.jpg">
-                                </div>
-                                <div class="column1">
-
-                                    <div class="job-info">
-                                        <h6 class="pricehead"><a href="#">
-                                                New Exam Schedules </a></h6>
-                                        <h5>February 25, 2020</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit architecto..</p>
-                                    </div>
-                                </div>
+                    </div><!-- swiper-wrapper -->
+                </div><!-- swiper-container -->
+            </div><!-- partner-items -->
+        </div><!-- container -->
+    </div><!-- overlay -->
+</section><!-- partner -->
+<!-- Partner End here -->
 
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-right mt-4">
-                        <a class="btn btn-secondary btn-theme2" href="#"> View All</a>
-                    </div>
-                </div>
-                <div class="w3l-faq-page col-lg-6 pl-3 pl-lg-5 mt-lg-0 mt-5">
-                    <h3 class="">Upcoming Events</h3>
-                    <div class="events-top mt-md-5 mt-4">
-                        <div class="events-top-left">
-                            <div class="icon-top">
-                                <h3>20</h3>
-                                <p>Nov</p>
-                                <span>2020</span>
-                            </div>
-                        </div>
-                        <div class="events-top-right">
-                            <h6 class="pricehead"><a href="#">
-                                    Luctus et ultrices posuere</a></h6>
-                            <p class="mb-2 mt-3">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                                posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis.
-                                Integer sit amet mattis quam.</p>
-                            <li>07:00 - 10:00</li>
-                            <li class="melb">Melbourne, Australia</li>
-                        </div>
-                    </div>
-                    <div class="events-top mt-4">
-                        <div class="events-top-left">
-                            <div class="icon-top">
-                                <h3>25</h3>
-                                <p>Nov</p>
-                                <span>2020</span>
-                            </div>
-                        </div>
-                        <div class="events-top-right">
-                            <h6 class="pricehead"><a href="#">
-                                    Nulla mollis dapibus nunc, ut </a></h6>
-                            <p class="mb-2 mt-3">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                                posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis.
-                                Integer sit amet mattis quam.</p>
-                            <li>07:00 - 10:00</li>
-                            <li class="melb">Melbourne, Australia</li>
-                        </div>
-                    </div>
-                    <div class="text-right mt-4">
-                        <a class="btn btn-secondary btn-theme2" href="#"> View All</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!--gallery block start-->
-
-<!--gallery block end-->
-<!-- grids block 5 -->
+<?php
+include 'partials/admission-block.php';
+?>

@@ -1,193 +1,106 @@
-<section class="w3l-footer-29-main">
-    <div class="footer-29">
+
+<!-- Footer Start here -->
+<footer>
+    <div class="footer-top">
         <div class="container">
-            <div class="d-grid grid-col-4 footer-top-29">
-                <div class="footer-list-29 footer-1">
-                    <h6 class="footer-title-29">Contact Us</h6>
-                    <ul>
-                        <li><p><span class="fa fa-map-marker"></span> House # 40, Road # 07, Sector # 13, Uttara</p>
-                        </li>
-                        <li><a href="tel:+01865-598364"><span class="fa fa-phone"></span> 01865-598364</a></li>
-                        <li><a class="mail" href="mailto:corporate-mail@support.com"><span
-                                        class="fa fa-envelope-open-o"></span> info@mastermindabacusbd.com</a></li>
-                    </ul>
-                    <div class="main-social-footer-29">
-                        <a target="_blank" class="facebook" href="https://www.facebook.com/mastermindabacusbd/"><span
-                                    class="fa fa-facebook"></span></a>
-                        <a target="_blank" class="twitter" href="https://twitter.com/mastermind_bd?lang=en"><span
-                                    class="fa fa-twitter"></span></a>
-                        <a class="instagram" href="#instagram"><span class="fa fa-instagram"></span></a>
-                        <a target="_blank" class="linkedin"
-                           href="https://bd.linkedin.com/company/mastermindabacusbd"><span
-                                    class="fa fa-linkedin"></span></a>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 firstfoter">
+                    <div class="footer-item">
+                        <div class="title"><img src="<?php echo base_url(); ?>assets/front/images/logo.png" alt="logo" class="img-responsive"></div>
+                        <div class="footer-about">
+                            <p>We at PSM aim to provide all children with a secure, caring, friendly, and well organised environment. We offer children and parents a service which promotes equality and values diversity.</p>
+                            <ul>
+                                <li><span><i class="fa fa-home" aria-hidden="true"></i></span>H-40, R-07, S-13, Uttara.</li>
+                                <li><span><i class="fa fa-phone" aria-hidden="true"></i></span> +880 1401-123603 / 06</li>
+                                <li class="lastemail"><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>info@playschoolmastermind.com</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-list-29 footer-2">
-                    <ul>
-                        <h6 class="footer-title-29">Featured Links</h6>
-                        <li><a href="admin-login">Admin Login</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                        <li><a href="https://mastermindabacusbd.com/gurdian-login">Guardian Login</a></li>
+                <div class="col-md-4 col-sm-6 col-xs-12 fb-plugin">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fplayschoolmastermind&tabs=timeline&width=350&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 recentpost">
+                    <div class="footer-item">
+                        <h4 class="title">Recent Photos</h4>
+                        <ul class="photos">
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_01.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_02.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_03.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_04.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_05.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_06.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_07.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_08.jpg" alt="gallery image" class="img-responsive"></a></li>
+                            <li><a href="<?php echo base_url(); ?>gallery"><img src="<?php echo base_url(); ?>assets/front/images/sidebar/gallery_09.jpg" alt="gallery image" class="img-responsive"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- footer top -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p>&copy; 2019. Designed By <a href="<?php echo base_url(); ?>index">Play School Mastermind</a></p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" style="float:right;">
+                    <ul class="social-default">
+                        <li><a href="https://www.facebook.com/playschoolmastermind" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCvajbI-USauX3wMTwKt0Paw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="footer-list-29 footer-3">
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- footer bottom -->
+</footer>
+<a class="page-scroll scroll-top" href="#scroll-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+<!-- Footer End here -->
 
-                    <h6 class="footer-title-29">Newsletter </h6>
-                    <form action="#" class="subscribe" method="post">
-                        <input name="email" placeholder="Email" required="" type="email">
-                        <button><span class="fa fa-envelope-o"></span></button>
-                    </form>
-                    <p>Subscribe and get our weekly newsletter</p>
-                    <p>We'll never share your email address</p>
 
-                </div>
-                <div class="footer-list-29 footer-4">
-                    <ul>
-                        <h6 class="footer-title-29">Quick Links</h6>
-                        <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
-                        <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li><a href="<?php echo base_url(); ?>about">About</a></li>
-<!--                        <li><a href="#"> Blog</a></li>-->
-                        <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="d-grid grid-col-2 bottom-copies">
-                <p class="copy-footer-29">© 2020 All rights reserved | Mastermindabacusbd.com</p>
-                <ul class="list-btm-29">
-                    <li><a href="#link">Privacy policy</a></li>
-                    <li><a href="#link">Terms of service</a></li>
+<!-- jquery -->
+<script src="<?php echo base_url(); ?>assets/front/js/jquery-1.12.4.min.js"></script>
 
-                </ul>
-            </div>
-        </div>
-    </div>
+<!-- Bootstrap -->
+<script src="<?php echo base_url(); ?>assets/front/js/bootstrap.min.js"></script>
 
-    <!-- move top -->
-    <button id="movetop" onclick="topFunction()" title="Go to top">
+<!-- Isotope -->
+<script src="<?php echo base_url(); ?>assets/front/js/isotope.min.js"></script>
 
-        <span class="fa fa-angle-up"></span>
-    </button>
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+<!-- lightcase -->
+<script src="<?php echo base_url(); ?>assets/front/js/lightcase.js"></script>
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
-        }
+<!-- counterup -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/front/js/jquery.counterup.min.js"></script>
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-    <!-- /move top -->
-</section>
-<script src="<?php echo base_url(); ?>assets/front/js/jquery-3.3.1.min.js"></script>
-<!-- //footer-28 block -->
-</section>
-<script>
-    $(function () {
-        $('.navbar-toggler').click(function () {
-            $('body').toggleClass('noscroll');
-        })
-    });
-</script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="<?php echo base_url(); ?>assets/front/js/jquery-3.3.1.min.js">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
-</script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 200
-    });
-</script>
-`
+<!-- Swiper -->
+<script src="<?php echo base_url(); ?>assets/front/js/swiper.jquery.min.js"></script>
 
-<!-- <script src="assets/js/smoothscroll.js"></script> -->
-<script src="<?php echo base_url(); ?>assets/front/js/owl.carousel.js"></script>
-<script src="<?php echo base_url(); ?>assets/front/js/lozad.min.js"></script>
-<!-- script for -->
-<script>
-    $(document).ready(function () {
-        $('.owl-one').owlCarousel({
-            loop: true,
-            margin: 0,
-            nav: true,
-            responsiveClass: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            autoplaySpeed: 1000,
-            autoplayHoverPause: false,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                480: {
-                    items: 1,
-                    nav: false
-                },
-                667: {
-                    items: 1,
-                    nav: true
-                },
-                1000: {
-                    items: 1,
-                    nav: true
-                }
-            }
-        })
+<!--progress-->
+<script src="<?php echo base_url(); ?>assets/front/js/circle-progress.min.js"></script>
 
-        $('.gallery-carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            nav: true,
-            responsiveClass: true,
-            autoplay: false,
-            autoplayTimeout: 5000,
-            autoplaySpeed: 1000,
-            autoplayHoverPause: false,
-            responsive: {
-                0: {
-                    items: 3,
-                    nav: false
-                },
-                480: {
-                    items: 3,
-                    nav: false
-                },
-                667: {
-                    items: 3,
-                    nav: true
-                },
-                1000: {
-                    items: 33,
-                    nav: true
-                }
-            }
-        })
-        //    lozad
+<!--velocity-->
+<script src="<?php echo base_url(); ?>assets/front/js/velocity.min.js"></script>
 
-        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-        observer.observe();
+<!--quick-view-->
+<script src="<?php echo base_url(); ?>assets/front/js/quick-view.js"></script>
 
-    })
-</script>
-<!-- //script -->
+<!--nstSlider-->
+<script src="<?php echo base_url(); ?>assets/front/js/jquery.nstSlider.js"></script>
+
+<!--flexslider-->
+<script src="<?php echo base_url(); ?>assets/front/js/flexslider-min.js"></script>
+
+<!--easing-->
+<script src="<?php echo base_url(); ?>assets/front/js/jquery.easing.min.js"></script>
+
+<!-- custom -->
+<script src="<?php echo base_url(); ?>assets/front/js/custom.js"></script>
 
 </body>
-
 </html>

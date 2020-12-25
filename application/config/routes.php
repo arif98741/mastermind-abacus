@@ -52,11 +52,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 $route['about'] = 'home/about';
+$route['about-us'] = 'home/about';
 $route['admission'] = 'home/admission';
-$route['about'] = 'home/about';
 $route['contact'] = 'home/contact';
+$route['contact-us'] = 'home/contact';
+$route['curriculum'] = 'home/curriculum';
+$route['gallery'] = 'home/gallery';
 $route['faq'] = 'home/faq';
-$route['program-overview'] = 'home/programOverview';
+$route['program'] = 'home/program';
 
 
 $route['backend'] = 'authentication';

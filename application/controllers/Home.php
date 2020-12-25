@@ -32,13 +32,28 @@ class Home extends Frontend_Controller
         $this->load->view('home/front/lib/footer');
     }
 
+    public function curriculam()
+    {
+        $this->load->view('home/front/lib/header');
+        $this->load->view('home/front/curriculum');
+        $this->load->view('home/front/lib/footer');
+    }
+
+    public function gallery()
+    {
+        $this->load->view('home/front/lib/header');
+        $this->load->view('home/front/gallery');
+        $this->load->view('home/front/lib/footer');
+    }
+
+
     /**
      * This is program overview Static View page
      */
-    public function programOverview()
+    public function program()
     {
         $this->load->view('home/front/lib/header');
-        $this->load->view('home/front/program-overview');
+        $this->load->view('home/front/program');
         $this->load->view('home/front/lib/footer');
     }
 

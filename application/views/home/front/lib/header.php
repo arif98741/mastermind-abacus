@@ -1,94 +1,156 @@
-<!doctype html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Play School Mastermind |  Best Preschool in Bangladesh, Best Preschool, Best Preschool in Dhaka, Best Preschool in Uttara, International Preschool in Uttara, International Preschool in Dhaka. International Preschool in Bangladesh.</title>
+    <link href="<?php echo base_url(); ?>assets/front/images/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
 
-    <title>Mastermind Abacus Bangladesh | Best Abacus Training center in Bangladesh</title>
-    <!-- web fonts -->
-    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap"
-          rel="stylesheet">
-    <!-- //web fonts -->
-    <!-- Template CSS -->
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/front/images/favicon.png">
-    <link href="<?php echo base_url(); ?>assets/front/css/style-starter.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font-awesome -->
+    <link href="<?php echo base_url(); ?>assets/front/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Flaticon -->
+    <link href="<?php echo base_url(); ?>assets/flaticon/flaticon.css" rel="stylesheet">
+
+    <!-- lightcase -->
+    <link href="<?php echo base_url(); ?>assets/front/css/lightcase.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link href="<?php echo base_url(); ?>assets/front/css/swiper.min.css" rel="stylesheet">
+
+    <!-- quick-view -->
+    <link href="<?php echo base_url(); ?>assets/front/css/quick-view.css" rel="stylesheet">
+
+    <!-- nstSlider -->
+    <link href="<?php echo base_url(); ?>assets/front/css/jquery.nstSlider.css" rel="stylesheet">
+
+    <!-- flexslider -->
+    <link href="<?php echo base_url(); ?>assets/front/css/flexslider.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="<?php echo base_url(); ?>assets/front/css/rtl.css" rel="stylesheet">
+
+    <!-- Style -->
     <link href="<?php echo base_url(); ?>assets/front/css/style.css" rel="stylesheet">
 
+    <!-- Responsive -->
+    <link href="<?php echo base_url(); ?>assets/front/css/responsive.css" rel="stylesheet">
+
+
 </head>
-<body>
 
 
-<!-- Top Menu 1 -->
-<section class="w3l-top-menu-1">
-    <div class="top-hd">
+<body id="scroll-top">
+
+<div class="mobile-menu-area">
+    <a class="navbar-brand" href="<?php echo base_url(); ?>index"><img src="<?php echo base_url(); ?>assets/front/images/logo.png" alt="logo" class="img-responsive"></a>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="mobile-menu">
+        <ul class="m-menu">
+            <li><a href="<?php echo base_url(); ?>">Home</a></li>
+            <li><a href="<?php echo base_url(); ?>about-us">About Us</a></li>
+            <li><a href="<?php echo base_url(); ?>programs">Programs</a></li>
+            <li><a href="<?php echo base_url(); ?>curriculum">Curriculum</a></li>
+            <li><a href="<?php echo base_url(); ?>gallery">Gallery</a></li>
+            <li class="dropdown-submenu">
+                <a href="#">Log in</a>
+                <ul class="mobile-submenu">
+                    <li><a href="<?php echo base_url(); ?>gurdian-login">Guardian</a></li>
+                    <li><a href="<?php echo base_url(); ?>teacher-login">Teacher</a></li>
+                    <li><a href="<?php echo base_url(); ?>backend">Admin</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo base_url(); ?>contact">Contact Us</a></li>
+            <li><a href="<?php echo base_url(); ?>admission" target="-blank" >Admission Now</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--===============mobile-menu-area end===============-->
+
+
+
+<!-- Preloader start here -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- Preloader end here -->
+<header>
+    <div class="header-top">
         <div class="container">
-            <header class="row top-menu-top">
-                <div class="accounts col-md-12 col-6">
-                    <li class="top_li"><span class="fa fa-phone"></span><a href="tel:+880-1865-598364">+880-1865-598364 |
-                            House # 40, Road # 07, Sector # 13, Uttara</a>
-                    </li>
-                    <li class="top_li1"><span class="fa fa-envelope-o"></span> <a
-                            class="mail" href="mailto:education-mail@support.com"> info@mastermindabacusbd.com</a></li>
+            <ul class="left">
+                <li><span><i class="fa fa-phone" aria-hidden="true"></i></span> Mobile : +8801 401 123 603</li>
+                <li><span><i class="fa fa-clock-o" aria-hidden="true"></i></span> Opening Time : 8:30am-5:00pm</li>
+                <li><span><i class="fa fa-home" aria-hidden="true"></i></span> Address : H #40, R #07, S #13, Uttara, Dhaka. </li>
+            </ul>
+            <ul class="right">
+                <li><a href="https://www.facebook.com/playschoolmastermind" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCvajbI-USauX3wMTwKt0Paw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div><!-- container -->
+    </div><!-- header top -->
+    <div class="main-menu">
+        <nav class="navbar ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="<?php echo base_url(); ?>index"><img src="<?php echo base_url(); ?>assets/front/images/logo.png" alt="logo" class="img-responsive"></a>
+                    </div>
                 </div>
 
-            </header>
-        </div>
-    </div>
-</section>
-<!-- //Top Menu 1 -->
-<section class="w3l-bootstrap-header">
-    <nav class="navbar navbar-expand-lg navbar-light py-lg-2 py-2">
-        <div class="container">
-            <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img src="<?php echo base_url();  ?>assets/front/images/logo.png"
-                                                            alt="mastermind abacus school logo"></a>
-            <!-- if logo is image enable this
-          <a class="navbar-brand" href="#index.html">
-              <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-          </a> -->
-            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler"
-                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon fa fa-bars"></span>
-            </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                        <li><a href="<?php echo base_url(); ?>about-us">About Us</a></li>
+                        <li><a href="<?php echo base_url(); ?>programs">Programs</a></li>
+                        <li><a href="<?php echo base_url(); ?>curriculum">Curriculum</a></li>
+                        <li><a href="<?php echo base_url(); ?>gallery">Gallery</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log in <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo base_url(); ?>/gurdian-login">Guardian</a></li>
+                                <li><a href="<?php echo base_url(); ?>teacher-login">Teacher</a></li>
+                                <li><a href="<?php echo base_url(); ?>backend">Admin</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>admission" target="-blank" class="admission" style="color:#ffffff;">Admission Now</a></li>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo base_url(); ?>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>program-overview">PROGRAMME OVERVIEW</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>program-overview#faq-section">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>admission">Admission</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>contact">Contact</a>
-                    </li>
-                      <li class="nav-item">
-                          <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Login
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="<?php echo base_url(); ?>backend">Admin Login</a>
-                                  <a class="dropdown-item" href="<?php echo base_url(); ?>guardian-login">Gurdian Login</a>
-                                  <a class="dropdown-item" href="<?php echo base_url(); ?>teacher-login">Teacher Login</a>
-                              </div>
-                          </div>
-                    </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+    </div><!-- main menu -->
+</header>
+<!-- header End here -->
 
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-</section>
